@@ -1,0 +1,49 @@
+/* Mobile Cart for Jungle skin */
+.mobile-cart {
+	background-color: #e5ebf3;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: ptr(13);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $black;
+		background-color: #ffffff;
+		border-bottom: 1px solid $gray-200;
+		padding: ptr(17) ptr(20);
+	}
+
+	.widget_shopping_cart {
+		.woocommerce-mini-cart {
+			background-color: #ffffff;
+			padding: ptr(20);
+
+			&__empty-message,
+			&__new-item-message {
+				margin: ptr(15) ptr(20);
+			}
+		}
+	}
+
+	&__close {
+		position: fixed;
+		visibility: hidden;
+		opacity: 0;
+		line-height: 50px;
+		color: $black;
+		background-color: $gray-600;
+		border: 0;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 0;
+		transition: visibility 300ms ease-out, opacity 300ms ease-out;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($gray-600, 6);
+		}
+	}
+}

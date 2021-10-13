@@ -1,0 +1,12 @@
+"Order ID","Order Date","Order Status","Order Total"
+2222,2021年2月28日,trash,116
+2225,2021年2月28日,trash,0.01
+2226,2021年2月28日,trash,0.01
+2242,2021年3月1日,trash,31.01
+2243,2021年3月1日,trash,0.01
+2249,2021年3月1日,trash,0.01
+2296,2021年3月2日,wc-processing,635.00
+2319,2021年3月3日,wc-cancelled,154.00
+2743,2021年3月13日,wc-cancelled,367.00
+2744,2021年3月13日,wc-cancelled,41.01
+2845,2021年3月17日,wc-cancelled,635.00

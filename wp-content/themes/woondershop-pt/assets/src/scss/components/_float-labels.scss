@@ -1,0 +1,98 @@
+/* Float Labels */
+
+// Instead of the `.fl-form` class which is added with JS on the body we will use our own `.woondershop-has-floating-labels` class which is added on the checkout page when the floating labels are activated in the customizer. Reason for that is flickering of the content when `.fl-form` class is used.
+.woondershop-has-floating-labels {
+	.fl-wrap {
+		position: relative;
+	}
+
+	.woocommerce {
+		select,
+		.input-text {
+			padding: ptr(17) ptr(20); // For float labels height of the inputs is bigger.
+		}
+
+		.form-row {
+			margin-bottom: ptr(20); // For float labels margin between inputs is smaller.
+		}
+
+		.fl-is-active {
+			.fl-input,
+			.fl-select,
+			.fl-textarea {
+				padding: ptr(26) ptr(20) ptr(8);
+			}
+		}
+	}
+
+	.fl-select {
+		cursor: pointer;
+		height: auto;
+	}
+
+	.fl-label {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		font-size: ptr(12);
+		color: $gray-600;
+		background-color: #ffffff;
+		top: 1px;
+		left: ptr(20);
+		right: ptr(20);
+		padding-top: ptr(20);
+		transition: all .2s ease-in-out;
+		z-index: 1;
+	}
+
+	.fl-is-active {
+		.fl-input,
+		.fl-select,
+		.fl-textarea {
+			border-color: $black;
+			padding: ptr(26) ptr(20) ptr(8);
+		}
+
+		.fl-label {
+			opacity: 1;
+			visibility: visible;
+			padding-top: ptr(10);
+		}
+	}
+
+	.fl-has-focus {
+		.fl-input,
+		.fl-select,
+		.fl-textarea {
+			border-color: $black;
+		}
+
+		.fl-label {
+			color: $black;
+		}
+	}
+
+	.woocommerce-validated {
+		.fl-label {
+			color: $green;
+		}
+
+		.fl-input,
+		.fl-select,
+		.fl-textarea {
+			border-color: $green;
+		}
+	}
+
+	.woocommerce-invalid {
+		.fl-label {
+			color: $red;
+		}
+	}
+
+	&.woondershop-loading-site {
+		label {
+			display: none; // Hide default labels before the floating labels are loaded.
+		}
+	}
+}

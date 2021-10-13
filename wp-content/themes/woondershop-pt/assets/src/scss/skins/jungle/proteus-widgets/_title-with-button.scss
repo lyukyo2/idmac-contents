@@ -1,0 +1,31 @@
+/* Title with button for Jungle skin */
+.title-with-button {
+	@include media-breakpoint-up(md) {
+		display: flex;
+		align-items: baseline;
+	}
+
+	&__title {
+		font-size: ptr(24);
+		margin-bottom: 0;
+		margin-right: ptr(25);
+	}
+
+	&__button {
+		position: relative;
+		font-size: ptr(16);
+		font-weight: bold;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&::after {
+			content: '\f30b';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			margin-left: ptr(6);
+		}
+	}
+}

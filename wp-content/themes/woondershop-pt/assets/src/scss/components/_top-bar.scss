@@ -1,0 +1,72 @@
+/* Top Bar */
+.top {
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		z-index: 25;
+	}
+
+	&__container {
+		font-size: ptr(13);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #ffffff;
+		background-color: $black;
+	}
+
+	.widget {
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	.textwidget {
+		padding: ptr(15) 0;
+	}
+
+	&__left {
+		.widget {
+			border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+			@include media-breakpoint-up(lg) {
+				border-right: 1px solid rgba(255, 255, 255, .2);
+				border-bottom: 0;
+				padding-right: ptr(15);
+				margin-right: ptr(15);
+			}
+
+			&:last-of-type {
+				border-bottom: 0;
+
+				@include media-breakpoint-up(lg) {
+					border-right: 0;
+					padding-right: 0;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__right {
+		.widget {
+			border-top: 1px solid rgba(255, 255, 255, .2);
+
+			@include media-breakpoint-up(lg) {
+				border-top: 0;
+				border-left: 1px solid rgba(255, 255, 255, .2);
+				padding-left: ptr(15);
+				margin-left: ptr(15);
+			}
+
+			&:first-of-type {
+				@include media-breakpoint-up(lg) {
+					border-left: 0;
+					padding-left: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

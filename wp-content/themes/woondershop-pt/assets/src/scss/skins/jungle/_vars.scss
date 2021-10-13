@@ -1,0 +1,159 @@
+/*------------------------------------*\
+    Local variables for Jungle skin
+\*------------------------------------*/
+
+//
+// Color system
+//
+
+$gray-100: #f4f4f4;
+$gray-200: #eeeeee;
+$gray-300: #dddddd;
+$gray-400: #cccccc;
+$gray-500: #ababab;
+$gray-600: #999999;
+$gray-800: #333333;
+$black: #000000;
+
+$blue: #3a7bb8;
+$red: #c00c00;
+$yellow: #ffc768;
+$orange: #f39f39;
+$green: #008f00;
+$cyan: #17a2b8;
+
+$blue-100: #f5f7fa;
+$blue-200: #e5ebf3;
+$blue-300: #d4deeb;
+$blue-400: #cacfd7;
+$blue-500: #b1c3db;
+
+$theme-colors: (
+	primary: $orange,
+	secondary: $gray-600,
+	success: $green,
+	info: $blue,
+	warning: $yellow,
+	danger: $red,
+	light: $gray-100,
+	dark: $gray-800
+);
+
+$yiq-contrasted-threshold: 155;
+$yiq-text-dark: $black;
+
+$primary-custom-icon-color: $orange;
+$secondary-custom-icon-color: $black;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color: #666666;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $blue;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1360px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1300px
+);
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// Rem px ratio Function
+@function ptr($px) {
+	@return ($px / $rem-px-ratio) + rem;
+}
+
+/* stylelint-disable value-keyword-case  */
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$primary-font: $font-family-sans-serif;
+$secondary-font: 'Helvetica Neue', Arial, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+/* stylelint-enable  */
+
+$rem-px-ratio: 20;
+
+$line-height-base: 1.55;
+
+$h1-font-size: ptr(42);
+$h2-font-size: ptr(36);
+$h3-font-size: ptr(30);
+$h4-font-size: ptr(24);
+$h5-font-size: ptr(20);
+$h6-font-size: ptr(18);
+
+$headings-font-weight: bold;
+$headings-line-height: 1.15;
+$headings-color: $gray-800;
+
+$content-spacing-base: ptr(50);
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius: 3px;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight: bold;
+$btn-padding-y: ptr(8.5);
+$btn-padding-x: ptr(20);
+$btn-padding-y-sm: ptr(6);
+$btn-padding-x-sm: ptr(15);
+$btn-padding-y-lg: ptr(12);
+$btn-padding-x-lg: ptr(30);
+$btn-border-radius: 3px;
+$btn-border-radius-lg: $btn-border-radius;
+$btn-border-radius-sm: $btn-border-radius;
+
+
+// ProteusThemes variables
+//
+// Custom variables which are not part of the Bootstrap.
+
+// Transitions
+$primary-transition: all 100ms ease-out;
+
+// Z-index
+$zindex-over-admin-bar: 100100;
+$zindex-woondershop-overlay: 900;
+
+// Font Awesome path
+$fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';

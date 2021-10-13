@@ -1,0 +1,950 @@
+@font-face {
+	font-family: woonder-icons;
+	src:
+		url('../../fonts/woonder-icons.woff?wlu9of') format('woff'),
+		url('../../fonts/woonder-icons.svg?wlu9of#woonder-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ws {
+
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: woonder-icons;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ws-yen .path1::before {
+	content: '\e900';
+	color: $primary-custom-icon-color;
+}
+.ws-yen .path2::before {
+	content: '\e901';
+	margin-left: -.7314453125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-tag .path1::before {
+	content: '\e902';
+	color: $primary-custom-icon-color;
+}
+.ws-tag .path2::before {
+	content: '\e903';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-tag .path3::before {
+	content: '\e904';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-return .path1::before {
+	content: '\e905';
+	color: $secondary-custom-icon-color;
+}
+.ws-return .path2::before {
+	content: '\e906';
+	margin-left: -.9970703125em;
+	color: $primary-custom-icon-color;
+}
+.ws-coins-1 .path1::before {
+	content: '\e907';
+	color: $primary-custom-icon-color;
+}
+.ws-coins-1 .path2::before {
+	content: '\e908';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-coins-1 .path3::before {
+	content: '\e909';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-coins-1 .path4::before {
+	content: '\e90a';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-coins-1 .path5::before {
+	content: '\e90b';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-sign .path1::before {
+	content: '\e90c';
+	color: $primary-custom-icon-color;
+}
+.ws-sign .path2::before {
+	content: '\e90d';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-sign .path3::before {
+	content: '\e90e';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-heart .path1::before {
+	content: '\e90f';
+	color: $primary-custom-icon-color;
+}
+.ws-heart .path2::before {
+	content: '\e910';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-heart .path3::before {
+	content: '\e911';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-heart .path4::before {
+	content: '\e912';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-wallet .path1::before {
+	content: '\e913';
+	color: $primary-custom-icon-color;
+}
+.ws-wallet .path2::before {
+	content: '\e914';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-wallet .path3::before {
+	content: '\e915';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag-2 .path1::before {
+	content: '\e916';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-bag-2 .path2::before {
+	content: '\e917';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag-2 .path3::before {
+	content: '\e918';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag-2 .path4::before {
+	content: '\e919';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-delivery-truck-1 .path1::before {
+	content: '\e91a';
+	color: $primary-custom-icon-color;
+}
+.ws-delivery-truck-1 .path2::before {
+	content: '\e91b';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-delivery-truck-1 .path3::before {
+	content: '\e91c';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-delivery-truck-1 .path4::before {
+	content: '\e91d';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-delivery-truck .path1::before {
+	content: '\e91e';
+	color: $primary-custom-icon-color;
+}
+.ws-delivery-truck .path2::before {
+	content: '\e91f';
+	margin-left: -1.40625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-ticket .path1::before {
+	content: '\e920';
+	color: $primary-custom-icon-color;
+}
+.ws-ticket .path2::before {
+	content: '\e921';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-ticket .path3::before {
+	content: '\e922';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path1::before {
+	content: '\e923';
+	color: $primary-custom-icon-color;
+}
+.ws-task .path2::before {
+	content: '\e924';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path3::before {
+	content: '\e925';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path4::before {
+	content: '\e926';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path5::before {
+	content: '\e927';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path6::before {
+	content: '\e928';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path7::before {
+	content: '\e929';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path8::before {
+	content: '\e92a';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path9::before {
+	content: '\e92b';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-task .path10::before {
+	content: '\e92c';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-chat .path1::before {
+	content: '\e92d';
+	color: $primary-custom-icon-color;
+}
+.ws-chat .path2::before {
+	content: '\e92e';
+	margin-left: -1em;
+	color: $primary-custom-icon-color;
+}
+.ws-chat .path3::before {
+	content: '\e92f';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-chat .path4::before {
+	content: '\e930';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-basket .path1::before {
+	content: '\e931';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-basket .path2::before {
+	content: '\e932';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-basket .path3::before {
+	content: '\e933';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-basket .path4::before {
+	content: '\e934';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-basket .path5::before {
+	content: '\e935';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag-1 .path1::before {
+	content: '\e936';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-bag-1 .path2::before {
+	content: '\e937';
+	margin-left: -.748046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag-1 .path3::before {
+	content: '\e938';
+	margin-left: -.748046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-loupe .path1::before {
+	content: '\e939';
+	color: $primary-custom-icon-color;
+}
+.ws-loupe .path2::before {
+	content: '\e93a';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-loupe .path3::before {
+	content: '\e93b';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-percentage .path1::before {
+	content: '\e93c';
+	color: $secondary-custom-icon-color;
+}
+.ws-percentage .path2::before {
+	content: '\e93d';
+	margin-left: -1em;
+	color: $primary-custom-icon-color;
+}
+.ws-percentage .path3::before {
+	content: '\e93e';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-percentage .path4::before {
+	content: '\e93f';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-percentage .path5::before {
+	content: '\e940';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-review .path1::before {
+	content: '\e941';
+	color: $primary-custom-icon-color;
+}
+.ws-review .path2::before {
+	content: '\e942';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-review .path3::before {
+	content: '\e943';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-review .path4::before {
+	content: '\e944';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}
+.ws-receipt .path1::before {
+	content: '\e945';
+	color: $primary-custom-icon-color;
+}
+.ws-receipt .path2::before {
+	content: '\e946';
+	margin-left: -.873046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-receipt .path3::before {
+	content: '\e947';
+	margin-left: -.873046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-receipt .path4::before {
+	content: '\e948';
+	margin-left: -.873046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-receipt .path5::before {
+	content: '\e949';
+	margin-left: -.873046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-receipt .path6::before {
+	content: '\e94a';
+	margin-left: -.873046875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone-1 .path1::before {
+	content: '\e94b';
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone-1 .path2::before {
+	content: '\e94c';
+	margin-left: -1.041015625em;
+	color: $primary-custom-icon-color;
+}
+.ws-smartphone-1 .path3::before {
+	content: '\e94d';
+	margin-left: -1.041015625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone .path1::before {
+	content: '\e94e';
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone .path2::before {
+	content: '\e94f';
+	margin-left: -.9970703125em;
+	color: $primary-custom-icon-color;
+}
+.ws-smartphone .path3::before {
+	content: '\e950';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone .path4::before {
+	content: '\e951';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-smartphone .path5::before {
+	content: '\e952';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-atm .path1::before {
+	content: '\e953';
+	color: $primary-custom-icon-color;
+}
+.ws-atm .path2::before {
+	content: '\e954';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-atm .path3::before {
+	content: '\e955';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-email .path1::before {
+	content: '\e956';
+	color: $secondary-custom-icon-color;
+}
+.ws-email .path2::before {
+	content: '\e957';
+	margin-left: -1.59375em;
+	color: $secondary-custom-icon-color;
+}
+.ws-email .path3::before {
+	content: '\e958';
+	margin-left: -1.59375em;
+	color: $primary-custom-icon-color;
+}
+.ws-email .path4::before {
+	content: '\e959';
+	margin-left: -1.59375em;
+	color: $secondary-custom-icon-color;
+}
+.ws-email .path5::before {
+	content: '\e95a';
+	margin-left: -1.59375em;
+	color: $secondary-custom-icon-color;
+}
+.ws-pin .path1::before {
+	content: '\e95b';
+	color: $secondary-custom-icon-color;
+}
+.ws-pin .path2::before {
+	content: '\e95c';
+	margin-left: -.7900390625em;
+	color: $primary-custom-icon-color;
+}
+.ws-pin .path3::before {
+	content: '\e95d';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-list .path1::before {
+	content: '\e95e';
+	color: $secondary-custom-icon-color;
+}
+.ws-list .path2::before {
+	content: '\e95f';
+	margin-left: -.8310546875em;
+	color: $primary-custom-icon-color;
+}
+.ws-list .path3::before {
+	content: '\e960';
+	margin-left: -.8310546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-list .path4::before {
+	content: '\e961';
+	margin-left: -.8310546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-list .path5::before {
+	content: '\e962';
+	margin-left: -.8310546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-list .path6::before {
+	content: '\e963';
+	margin-left: -.8310546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-hanger-1 .path1::before {
+	content: '\e964';
+	color: $primary-custom-icon-color;
+}
+.ws-hanger-1 .path2::before {
+	content: '\e965';
+	margin-left: -1.3291015625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-hanger-1 .path3::before {
+	content: '\e966';
+	margin-left: -1.3291015625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-hanger .path1::before {
+	content: '\e967';
+	color: $primary-custom-icon-color;
+}
+.ws-hanger .path2::before {
+	content: '\e968';
+	margin-left: -1.494140625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-gift .path1::before {
+	content: '\e969';
+	color: $primary-custom-icon-color;
+}
+.ws-gift .path2::before {
+	content: '\e96a';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-gift-bag .path1::before {
+	content: '\e96b';
+	color: $primary-custom-icon-color;
+}
+.ws-gift-bag .path2::before {
+	content: '\e96c';
+	margin-left: -1.041015625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package-2 .path1::before {
+	content: '\e96d';
+	color: $primary-custom-icon-color;
+}
+.ws-package-2 .path2::before {
+	content: '\e96e';
+	margin-left: -1.2587890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package-2 .path3::before {
+	content: '\e96f';
+	margin-left: -1.2587890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package-2 .path4::before {
+	content: '\e970';
+	margin-left: -1.2587890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package-2 .path5::before {
+	content: '\e971';
+	margin-left: -1.2587890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-dollar .path1::before {
+	content: '\e972';
+	color: $primary-custom-icon-color;
+}
+.ws-dollar .path2::before {
+	content: '\e973';
+	margin-left: -.6650390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-euro .path1::before {
+	content: '\e974';
+	color: $primary-custom-icon-color;
+}
+.ws-euro .path2::before {
+	content: '\e975';
+	margin-left: -.69140625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-coins .path1::before {
+	content: '\e976';
+	color: $primary-custom-icon-color;
+}
+.ws-coins .path2::before {
+	content: '\e977';
+	margin-left: -.7060546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-coins .path3::before {
+	content: '\e978';
+	margin-left: -.7060546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cursor .path1::before {
+	content: '\e979';
+	color: $secondary-custom-icon-color;
+}
+.ws-cursor .path2::before {
+	content: '\e97a';
+	margin-left: -.9970703125em;
+	color: $primary-custom-icon-color;
+}
+.ws-cursor .path3::before {
+	content: '\e97b';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cursor .path4::before {
+	content: '\e97c';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cursor .path5::before {
+	content: '\e97d';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-online-banking .path1::before {
+	content: '\e97e';
+	color: $primary-custom-icon-color;
+}
+.ws-online-banking .path2::before {
+	content: '\e97f';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-online-banking .path3::before {
+	content: '\e980';
+	margin-left: -.9560546875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash-1 .path1::before {
+	content: '\e981';
+	color: $primary-custom-icon-color;
+}
+.ws-cash-1 .path2::before {
+	content: '\e982';
+	margin-left: -1.1962890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash-1 .path3::before {
+	content: '\e983';
+	margin-left: -1.1962890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash-1 .path4::before {
+	content: '\e984';
+	margin-left: -1.1962890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash .path1::before {
+	content: '\e985';
+	color: $primary-custom-icon-color;
+}
+.ws-cash .path2::before {
+	content: '\e986';
+	margin-left: -1.70703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash .path3::before {
+	content: '\e987';
+	margin-left: -1.70703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-cash .path4::before {
+	content: '\e988';
+	margin-left: -1.70703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-trolley .path1::before {
+	content: '\e989';
+	color: $primary-custom-icon-color;
+}
+.ws-trolley .path2::before {
+	content: '\e98a';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-trolley .path3::before {
+	content: '\e98b';
+	margin-left: -1.087890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart-2 .path1::before {
+	content: '\e98c';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-cart-2 .path2::before {
+	content: '\e98d';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart-2 .path3::before {
+	content: '\e98e';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart-2 .path4::before {
+	content: '\e98f';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart-2 .path5::before {
+	content: '\e990';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart-1 .path1::before {
+	content: '\e991';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-cart-1 .path2::before {
+	content: '\e992';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-cart .path1::before {
+	content: '\e993';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-cart .path2::before {
+	content: '\e994';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card-1 .path1::before {
+	content: '\e995';
+	color: $primary-custom-icon-color;
+}
+.ws-credit-card-1 .path2::before {
+	content: '\e996';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card-1 .path3::before {
+	content: '\e997';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card-1 .path4::before {
+	content: '\e998';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card-1 .path5::before {
+	content: '\e999';
+	margin-left: -.9970703125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card .path1::before {
+	content: '\e99a';
+	color: $primary-custom-icon-color;
+}
+.ws-credit-card .path2::before {
+	content: '\e99b';
+	margin-left: -1.494140625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-credit-card .path3::before {
+	content: '\e99c';
+	margin-left: -1.494140625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path1::before {
+	content: '\e99d';
+	color: $primary-custom-icon-color;
+}
+.ws-calculator .path2::before {
+	content: '\e99e';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path3::before {
+	content: '\e99f';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path4::before {
+	content: '\e9a0';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path5::before {
+	content: '\e9a1';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path6::before {
+	content: '\e9a2';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path7::before {
+	content: '\e9a3';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path8::before {
+	content: '\e9a4';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path9::before {
+	content: '\e9a5';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path10::before {
+	content: '\e9a6';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path11::before {
+	content: '\e9a7';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path12::before {
+	content: '\e9a8';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-calculator .path13::before {
+	content: '\e9a9';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package-1 .path1::before {
+	content: '\e9aa';
+	color: $primary-custom-icon-color;
+}
+.ws-package-1 .path2::before {
+	content: '\e9ab';
+	margin-left: -.9140625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-package .path1::before {
+	content: '\e9ac';
+	color: $primary-custom-icon-color;
+}
+.ws-package .path2::before {
+	content: '\e9ad';
+	margin-left: -.875em;
+	color: $secondary-custom-icon-color;
+}
+.ws-medal .path1::before {
+	content: '\e9ae';
+	color: $primary-custom-icon-color;
+}
+.ws-medal .path2::before {
+	content: '\e9af';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-medal .path3::before {
+	content: '\e9b0';
+	margin-left: -.7900390625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path1::before {
+	content: '\e9b1';
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path2::before {
+	content: '\e9b2';
+	margin-left: -1.6337890625em;
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path3::before {
+	content: '\e9b3';
+	margin-left: -1.6337890625em;
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path4::before {
+	content: '\e9b4';
+	margin-left: -1.6337890625em;
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path5::before {
+	content: '\e9b5';
+	margin-left: -1.6337890625em;
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path6::before {
+	content: '\e9b6';
+	margin-left: -1.6337890625em;
+	color: $primary-custom-icon-color;
+}
+.ws-barcode .path7::before {
+	content: '\e9b7';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path8::before {
+	content: '\e9b8';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path9::before {
+	content: '\e9b9';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path10::before {
+	content: '\e9ba';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path11::before {
+	content: '\e9bb';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-barcode .path12::before {
+	content: '\e9bc';
+	margin-left: -1.6337890625em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag .path1::before {
+	content: '\e9bd';
+	color: $primary-custom-icon-color;
+}
+.ws-shopping-bag .path2::before {
+	content: '\e9be';
+	margin-left: -.9580078125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag .path3::before {
+	content: '\e9bf';
+	margin-left: -.9580078125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-shopping-bag .path4::before {
+	content: '\e9c0';
+	margin-left: -.9580078125em;
+	color: $secondary-custom-icon-color;
+}
+.ws-worldwide .path1::before {
+	content: '\e9c1';
+	color: $primary-custom-icon-color;
+}
+.ws-worldwide .path2::before {
+	content: '\e9c2';
+	margin-left: -1em;
+	color: $secondary-custom-icon-color;
+}

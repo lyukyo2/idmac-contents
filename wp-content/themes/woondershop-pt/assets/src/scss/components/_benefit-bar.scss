@@ -1,0 +1,59 @@
+/* Benefit Bar */
+.benefit-bar {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		flex-direction: row;
+	}
+
+	&__container {
+		padding: ptr(15) 0;
+
+		@include media-breakpoint-up(lg) {
+			padding: ptr(11) 0;
+		}
+
+		.woondershop-has-header-widgets-on-mobile & {
+			@include media-breakpoint-down(md) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	.widget {
+		position: relative;
+		display: flex;
+		align-items: center;
+		background-color: $gray-100;
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+			flex: 1 1 0;
+			background-color: transparent;
+			width: auto;
+		}
+
+		&:not(:last-of-type) {
+			margin-bottom: 1px;
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+
+			&::after {
+				@include media-breakpoint-up(md) {
+					position: absolute;
+					content: '';
+					width: 1px;
+					height: calc(100% - #{ptr(12)});
+					right: 0;
+					background-color: $gray-200;
+				}
+			}
+		}
+	}
+}

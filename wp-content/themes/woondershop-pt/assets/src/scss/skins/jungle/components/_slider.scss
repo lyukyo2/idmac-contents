@@ -1,0 +1,36 @@
+.pt-slick-carousel {
+	@include media-breakpoint-down(md) {
+		padding: 0;
+	}
+
+	.slick-arrow {
+		height: ptr(90);
+		top: calc(50% - #{ptr(45)});
+	}
+
+	.slick-prev {
+		left: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.slick-next {
+		right: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__content {
+		@include media-breakpoint-up(lg) {
+			left: calc(50% - #{map-get($container-max-widths, lg) / 2} + 10px);
+		}
+
+		@include media-breakpoint-up(xl) {
+			left: calc(50% - #{map-get($container-max-widths, xl) / 2} + 10px);
+		}
+
+		@include media-breakpoint-up(xxl) {
+			left: calc(50% - #{map-get($container-max-widths, xxl) / 2} + 10px);
+		}
+	}
+}

@@ -1,0 +1,305 @@
+/* 05.12. Slick Carousel */
+.pt-slick-carousel {
+	position: relative;
+	visibility: hidden; /* Hide the whole slider by default. It will be displayed once the slider initializes (with JS). */
+	font-size: 0;
+	margin-bottom: ptr(65);
+	outline: none;
+
+	.carousel-item {
+		&__slide-image-mobile {
+			@include media-breakpoint-down(sm) {
+				height: ptr(240);
+				object-fit: cover;
+			}
+
+			&--left {
+				@include media-breakpoint-down(sm) {
+					object-position: left;
+				}
+			}
+
+			&--right {
+				@include media-breakpoint-down(sm) {
+					object-position: right;
+				}
+			}
+
+			&--center {
+				@include media-breakpoint-down(sm) {
+					object-position: center;
+				}
+			}
+		}
+
+		// Show play button as background image only on mobile.
+		&--video {
+			&::after {
+				@include media-breakpoint-down(md) {
+					position: absolute;
+					content: '';
+					background: url('../../images/play_icon.svg') no-repeat center center;
+					background-size: 15%;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					pointer-events: none;
+				}
+			}
+		}
+
+		// IE fix (without this, the slider items look "cover").
+		img {
+			width: 100%;
+		}
+
+		// Show play button as a svg only on desktop.
+		&__video-play-button {
+			display: none;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+			border-radius: 50%;
+
+			@include media-breakpoint-up(lg) {
+				transition: all 200ms ease-out;
+				transition-delay: 200ms;
+			}
+		}
+	}
+
+	&__slides {
+		position: relative;
+	}
+
+	&__container {
+		&--video {
+			pointer-events: none;
+		}
+	}
+
+	&__content {
+		position: relative;
+		margin-left: 15px;
+		margin-right: 15px;
+
+		@include media-breakpoint-down(md) {
+			padding: ptr(20) ($grid-gutter-width / 2);
+			background-color: $white;
+			box-shadow: 0 2px 23px rgba(0, 0, 0, .15);
+			text-align: center;
+		}
+
+		@include media-breakpoint-up(sm) {
+			width: 510px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include media-breakpoint-up(md) {
+			width: 690px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: flex-start;
+			width: auto;
+			top: 0;
+			bottom: 0;
+			left: ptr(120);
+			right: 52%;
+		}
+
+		@media (min-width: 1360px) {
+			left: calc(50% - #{ptr(1110/2)});
+		}
+
+		// A triangle which connects slider image and slider content on mobile.
+		&::before {
+			position: absolute;
+			content: '';
+			top: -20px;
+			left: calc(50% - 15px);
+			border-width: 0 15px 20px;
+			border-color: transparent;
+			border-bottom-color: $white;
+			border-style: solid;
+
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
+
+		&--video {
+			.carousel-item__video-play-button {
+				@include media-breakpoint-up(lg) {
+					display: block;
+				}
+			}
+
+			.pt-slick-carousel__content-description {
+				display: none;
+			}
+		}
+
+		&-title {
+			font-size: ptr(27);
+			margin-bottom: ptr(12);
+
+			@include media-breakpoint-up(lg) {
+				font-size: ptr(36);
+				transition: all 200ms ease-out;
+			}
+
+			@media (min-width: 1600px) {
+				font-size: ptr(46);
+			}
+		}
+
+		&-description {
+			color: $body-color;
+			font-size: ptr(15.5);
+
+			@include media-breakpoint-up(lg) {
+				color: rgba(0, 0, 0, .6);
+				transition: all 200ms ease-out;
+				transition-delay: 200ms;
+			}
+
+			@media (min-width: 992px) and (max-width: 1599.98px) {
+				font-size: ptr(16);
+
+				.btn {
+					padding: ptr(10) ptr(19);
+				}
+			}
+
+			@media (min-width: 1600px) {
+				p:last-of-type {
+					margin-bottom: ptr(38);
+				}
+
+				.btn:only-child {
+					margin-top: ptr(20);
+				}
+			}
+
+			p {
+				@include media-breakpoint-down(md) {
+					margin-bottom: ptr(16);
+				}
+			}
+		}
+
+		&.is-in-transition {
+			.pt-slick-carousel__content-title,
+			.pt-slick-carousel__content-description,
+			.carousel-item__video-play-button {
+				@include media-breakpoint-up(lg) {
+					opacity: 0;
+					transform: translateX(-60px);
+					transition: none;
+				}
+			}
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		font-size: ptr(25);
+		text-align: center;
+		width: ptr(60);
+		height: ptr(60);
+		top: calc(50% - #{ptr(30)});
+		line-height: ptr(60);
+		border: 0;
+		border-radius: $border-radius;
+		background-color: rgba(0, 0, 0, .4);
+		color: rgba(255, 255, 255, .6);
+		padding: 0;
+		z-index: 5;
+		transition: $primary-transition;
+		cursor: pointer;
+
+		&:focus {
+			outline: 0;
+			background-color: rgba(0, 0, 0, .55);
+		}
+
+		&:hover {
+			background-color: rgba(0, 0, 0, .7);
+		}
+
+		@at-root {
+			.no-touchevents {
+				.pt-slick-carousel {
+					.slick-arrow {
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					&:focus,
+					&:hover {
+						.slick-arrow {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.slick-prev {
+		left: ptr(30);
+	}
+
+	.slick-next {
+		right: ptr(30);
+	}
+
+	.slick-dots {
+		@include list-unstyled;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		text-align: center;
+		margin: map-get($spacers, 3) 0 0;
+
+		@include media-breakpoint-up(lg) {
+			opacity: 1;
+			visibility: visible;
+			left: 0;
+			right: 0;
+			bottom: map-get($spacers, 3);
+		}
+
+		li {
+			display: inline-block;
+			margin-right: ptr(10);
+			background-color: rgba(0, 0, 0, .5);
+			border: 0;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			button {
+				display: none;
+			}
+		}
+
+		.slick-active {
+			background-color: rgba(0, 0, 0, .8);
+		}
+	}
+}

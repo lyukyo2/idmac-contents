@@ -1,0 +1,151 @@
+/* Woonder Products for Fab skin */
+.woonder-products {
+	display: flex;
+	flex-wrap: wrap; // On mobile we let products break into multiple rows.
+	margin: 0 ptr(-8); // Smaller gutter between products on mobile.
+
+	@include media-breakpoint-up(sm) {
+		margin: 0 ptr(-15);
+	}
+
+	@include media-breakpoint-up(lg) {
+		flex-wrap: nowrap; // On desktop, all the products are forced to be in one row.
+	}
+
+	&__item {
+		flex: 0 1 50%; // On mobile, there are up to 2 products in a row.
+		display: block;
+		position: relative;
+		padding: 0 ptr(8); // Smaller gutter between products on mobile.
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(sm) {
+			padding: 0 ptr(15);
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__navigation {
+		text-align: center;
+
+		@include media-breakpoint-up(lg) {
+			margin-top: ptr(15);
+		}
+	}
+
+	&__arrow {
+		height: ptr(50);
+		width: ptr(100);
+		line-height: ptr(52);
+		color: $gray-600;
+		background-color: $gray-200;
+		border: 0;
+		border-radius: $border-radius;
+		padding: 0;
+		transition: $primary-transition;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+			background-color: $gray-100;
+		}
+
+		&:hover {
+			background-color: $gray-400;
+		}
+
+		&--prev {
+			padding-right: ptr(4);
+			margin-right: ptr(15);
+		}
+
+		&--next {
+			padding-left: ptr(4);
+			margin-left: ptr(15);
+		}
+	}
+}
+
+.woonder-product {
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+
+		.woonder-product {
+			&__title {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&:active {
+		img {
+			box-shadow: 0 0 3px #4a90e2;
+
+			@include media-breakpoint-up(lg) {
+				box-shadow: none;
+			}
+		}
+	}
+
+	img {
+		margin-bottom: ptr(9);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(17);
+		}
+
+		.widget_pw_woonder_products & {
+			width: 100%;
+		}
+	}
+
+	&__onsale {
+		position: absolute;
+		left: ptr(15);
+		top: ptr(8);
+
+		@include media-breakpoint-up(sm) {
+			left: ptr(22);
+		}
+	}
+
+	&__title {
+		font-family: $secondary-font;
+		font-size: 14px;
+		margin-bottom: ptr(3);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(9);
+		}
+	}
+
+	&__price {
+		display: flex;
+		justify-content: center;
+		font-size: 15px;
+		font-weight: bold;
+		color: $green;
+
+		del {
+			order: 2;
+			font-weight: normal;
+		}
+
+		ins {
+			order: 1;
+			text-decoration: none;
+			margin-left: 0;
+			margin-right: ptr(10);
+
+			.amount {
+				color: $red;
+			}
+		}
+	}
+}

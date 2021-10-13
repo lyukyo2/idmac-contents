@@ -1,0 +1,144 @@
+/* Header Mobile */
+.header-mobile {
+	display: flex;
+	align-items: center;
+
+	@media print { // fixes bug when this element overlaid all content on print
+		&__overlay-elements {
+			display: none !important;
+		}
+	}
+
+	&__container {
+		padding-top: ptr(12);
+		padding-bottom: ptr(12);
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+
+		.woondershop-has-no-mobile-header-elements & {
+			margin-bottom: 0;
+		}
+
+		body.woondershop-has-mobile-sticky-header & {
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: $white;
+			z-index: 55;
+		}
+
+		body.woondershop-has-mobile-sticky-header.admin-bar & {
+			@media (min-width: 601px) {
+				top: 46px;
+			}
+
+			@media (min-width: 783px) {
+				top: 32px;
+			}
+		}
+
+		html:not(.pt-pb-closed) body.woondershop-has-mobile-sticky-header.pt-pb-loaded & {
+			@media (min-width: 601px) {
+				top: 54px;
+			}
+		}
+	}
+
+	&__navbar-toggler {
+		font-size: ptr(28);
+		line-height: 1;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		margin-right: ptr(20);
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-600;
+		}
+	}
+
+	&__search {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: translateY(-100%);
+		overflow-y: scroll;
+		transition: all 150ms ease-out;
+		z-index: 10;
+	}
+
+	&__search-toggler {
+		font-size: ptr(30);
+		color: $gray-400;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		padding-left: ptr(5);
+		margin-left: ptr(15);
+		cursor: pointer;
+		transition: $primary-transition;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-600;
+		}
+	}
+
+	&__cart {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 50px;
+		right: 0;
+		transform: translateX(100%);
+		overflow-y: scroll;
+		transition: transform 150ms ease-out;
+		z-index: 10;
+	}
+
+	&__cart-toggler {
+		position: relative;
+		font-size: ptr(30);
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		padding-left: ptr(5);
+		margin-left: ptr(15);
+		cursor: pointer;
+		transition: $primary-transition;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-600;
+		}
+
+		.woondershop-cart-quantity {
+			position: absolute;
+			font-size: 10px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 14px;
+			color: #ffffff;
+			background-color: $green;
+			border: 2px solid #ffffff;
+			border-radius: 50%;
+			min-width: 16px;
+			height: 16px;
+			padding: 0 3px;
+			bottom: 3px;
+			right: -5px;
+		}
+	}
+}

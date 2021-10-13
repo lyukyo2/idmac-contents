@@ -1,0 +1,44 @@
+/* Page Header */
+.page-header {
+	text-align: center;
+	background-color: $gray-100;
+	padding-top: ptr(18);
+	padding-bottom: ptr(18);
+	margin-bottom: ptr(55);
+
+	@include media-breakpoint-up(lg) {
+		padding-top: ptr(32);
+		padding-bottom: ptr(36);
+	}
+
+	&__title {
+		font-size: ptr(28);
+		color: theme-color('primary');
+		margin-bottom: 0;
+
+		@include media-breakpoint-up(lg) {
+			font-size: ptr(32);
+		}
+
+		+ .breadcrumbs {
+			margin-top: ptr(2);
+
+			@include media-breakpoint-up(lg) {
+				margin-top: ptr(6);
+			}
+		}
+	}
+
+	+ .mobile-sort-and-filter {
+		border-top: 1px solid $gray-300;
+		margin-top: ptr(-55);
+	}
+
+	.single-product & {
+		margin-bottom: 15px;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(55);
+		}
+	}
+}

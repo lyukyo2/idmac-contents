@@ -1,0 +1,139 @@
+/* Smart Search */
+.smart-search-results {
+	font-size: ptr(14);
+	border: 0;
+	border-radius: 2px;
+	width: auto !important;
+	left: 0;
+	right: 0;
+	margin-top: ptr(-30);
+	z-index: 8;
+
+	&.has-viewall-button {
+		padding-bottom: ptr(88);
+	}
+}
+
+.smart-search-suggestions {
+	background-color: #ffffff;
+	border: 0;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	width: auto !important;
+	right: 0 !important;
+	padding-top: ptr(50);
+
+	.woondershop-has-desktop-sticky-header--triggered & {
+		padding-top: ptr(57);
+	}
+
+	> .autocomplete-suggestion {
+		padding: 0;
+		border-bottom: 0;
+
+		&.autocomplete-selected {
+			opacity: 1;
+		}
+	}
+
+	.autocomplete-no-suggestion {
+		font-size: ptr(14);
+		line-height: inherit;
+		padding-top: ptr(3);
+	}
+
+	.smart-search-post {
+		display: inline-block;
+		color: #000000;
+		width: 100%;
+		padding: ptr(12) ptr(20);
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			background-color: $gray-200;
+		}
+
+		.smart-search-clear {
+			display: none;
+			clear: none;
+		}
+
+		&-icon {
+			margin-bottom: 0;
+		}
+
+		&-holder {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-title,
+		&-excerpt {
+			color: #777777;
+
+			strong {
+				color: #000000;
+			}
+		}
+
+		&-title {
+			font-size: ptr(16);
+			font-weight: bold;
+		}
+
+		&-excerpt {
+			font-size: ptr(12);
+			margin: 0;
+		}
+
+		&-price {
+			display: flex;
+			font-weight: bold;
+
+			del {
+				order: 2;
+				font-weight: normal;
+				color: #777777;
+				margin-left: ptr(8);
+			}
+
+			ins {
+				order: 1;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.smart-search-view-all-holder {
+	background-color: #ffffff;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+
+	> a {
+		font-size: ptr(13);
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		line-height: inherit;
+		color: #ffffff;
+		background-color: theme-color('primary');
+		border-color: theme-color('primary');
+		border-radius: 2px;
+		height: auto;
+		padding: ptr(14) ptr(30);
+		margin: ptr(20);
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			background-color: lighten(theme-color('primary'), 12);
+		}
+
+		.mobile-search & {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}

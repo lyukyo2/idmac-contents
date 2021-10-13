@@ -1,0 +1,12 @@
+"Order ID","Order Key","Order Date","Completed Date",Title,"Order Status","Order Currency","Payment Method Title","Order Total"
+2222,wc_order_9zhvlrRRC5Zus,2021年2月28日,"2021-02-28 22:56:00","Order &ndash; 2月 28, 2021 @ 10:52 下午",trash,USD,微信支付,116
+2225,wc_order_RTqcz1IGQnCaS,2021年2月28日,,"Order &ndash; 2月 28, 2021 @ 11:23 下午",trash,USD,微信支付,0.01
+2226,wc_order_bz74Pt6KCSyrL,2021年2月28日,,"Order &ndash; 3月 1, 2021 @ 12:06 上午",trash,USD,微信支付,0.01
+2242,wc_order_A47lMH31duXSt,2021年3月1日,,"Order &ndash; 3月 1, 2021 @ 10:48 上午",trash,USD,微信支付,31.01
+2243,wc_order_0aNgIlmyzyVy5,2021年3月1日,,"Order &ndash; 3月 1, 2021 @ 12:02 下午",trash,USD,微信支付,0.01
+2249,wc_order_QOkrOmteeZLMl,2021年3月1日,,"Order &ndash; 3月 1, 2021 @ 12:38 下午",trash,USD,微信支付,0.01
+2296,wc_order_a9NwP13CYkFhR,2021年3月2日,,"Order &ndash; 3月 2, 2021 @ 11:46 上午",wc-processing,SGD,微信支付,635.00
+2319,wc_order_rOVe8aoOYXjrw,2021年3月3日,,"Order &ndash; 3月 3, 2021 @ 12:07 下午",wc-cancelled,SGD,微信支付,154.00
+2743,wc_order_E6fXW6YXITHt6,2021年3月13日,,"Order &ndash; 3月 13, 2021 @ 10:35 上午",wc-cancelled,SGD,微信支付,367.00
+2744,wc_order_3P8Di4yATPTv2,2021年3月13日,,"Order &ndash; 3月 13, 2021 @ 02:53 下午",wc-cancelled,SGD,微信支付,41.01
+2845,wc_order_huyMUIGvBVQrE,2021年3月17日,,"Order &ndash; 3月 17, 2021 @ 03:48 下午",wc-cancelled,SGD,微信支付,635.00

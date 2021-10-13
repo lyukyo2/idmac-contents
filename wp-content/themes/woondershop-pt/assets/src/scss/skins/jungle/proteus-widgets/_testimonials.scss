@@ -1,0 +1,153 @@
+/* Testimonials */
+.testimonials {
+	.slick-track {
+		display: flex;
+	}
+
+	&.slick-initialized {
+		.slick-slide {
+			display: flex;
+			height: auto;
+
+			> div {
+				width: 100%;
+			}
+		}
+	}
+
+	&__container {
+		position: relative;
+
+		&:focus,
+		&:hover {
+			.slick-arrow {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__navigation {
+		.slick-arrow {
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			font-size: ptr(30);
+			color: #ffffff;
+			background-color: rgba(0, 0, 0, .2);
+			border: 0;
+			width: ptr(50);
+			height: ptr(90);
+			top: calc(50% - #{ptr(45)});
+			cursor: pointer;
+			transition: $primary-transition;
+
+			&:focus {
+				background-color: rgba(0, 0, 0, .2);
+				outline: none;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .3);
+			}
+		}
+
+		.slick-prev {
+			left: 0;
+			border-radius: $border-radius;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.slick-next {
+			right: 0;
+			border-radius: $border-radius;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+.widget-testimonials {
+	.widget-title {
+		font-size: ptr(32);
+		text-align: center;
+		margin-bottom: ptr(40);
+	}
+}
+
+.testimonial {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: #ffffff;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+	border-radius: $border-radius;
+	height: calc(100% - #{ptr(30)});
+	padding: ptr(53) ptr(60) ptr(45);
+	margin: ptr(15);
+	overflow: hidden;
+
+	&__container {
+		height: 100%;
+	}
+
+	&::after {
+		position: absolute;
+		content: '“';
+		font-family: Georgia, 'Times New Roman';
+		font-size: ptr(325);
+		line-height: 0;
+		color: #e6ebf2;
+		bottom: ptr(-65);
+		right: ptr(60);
+	}
+
+	&__quote {
+		font-size: ptr(16);
+		margin-bottom: ptr(38);
+	}
+
+	&__author-container {
+		display: flex;
+		align-items: center;
+		margin-top: auto;
+	}
+
+	&__author-avatar {
+		margin-right: ptr(15);
+
+		img {
+			.widget & {
+				width: ptr(60);
+				height: ptr(60);
+				border-radius: 50%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__author-info {
+		line-height: 1;
+	}
+
+	&__author {
+		font-size: ptr(18);
+		font-weight: bold;
+		font-style: normal;
+		color: #000000;
+
+		+ .testimonial__rating {
+			margin-top: ptr(8);
+		}
+	}
+
+	&__rating {
+		font-size: 0;
+		color: $yellow;
+
+		i {
+			font-size: ptr(12);
+		}
+	}
+}

@@ -1,0 +1,79 @@
+/* Article Margins */
+
+// Margin bottom for all the headings.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: ptr(28);
+
+	// Different margin for images inside the p tag which is bellow the h tag.
+	+ p {
+		.aligncenter,
+		.alignnone {
+			margin-top: ptr(39);
+		}
+	}
+
+	// Different margin for tags without additional line height bellow the h tag.
+	+ .aligncenter,
+	+ .alignnone,
+	+ pre,
+	+ table {
+		margin-top: ptr(39);
+	}
+}
+
+// Margin bottom for all the paragraphs.
+p,
+dl,
+ul,
+ol,
+address {
+	margin-bottom: ptr(30);
+
+	// Different margin for heading below the paragraph.
+	+ h1,
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-top: ptr(75);
+	}
+
+	// Different margin for images inside the p tag which is bellow the p tag.
+	+ p {
+		.aligncenter,
+		.alignnone {
+			margin-top: ptr(41);
+		}
+	}
+
+	// Different margin for images bellow the p tag.
+	+ .aligncenter,
+	+ .alignnone,
+	+ pre,
+	+ table {
+		margin-top: ptr(41);
+	}
+}
+
+// Margin bottom for all the tags without additional line height.
+pre,
+table,
+.embed-responsive {
+	margin-bottom: ptr(39);
+
+	// Different margin for heading below the tags without additional line height.
+	+ h1,
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-top: ptr(84);
+	}
+}

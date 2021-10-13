@@ -1,0 +1,82 @@
+/* Footer for Fab skin */
+.footer {
+	font-size: ptr(16);
+	background-color: #f3f4eb;
+
+	.footer-top .widget_nav_menu a {
+		font-size: ptr(16);
+		padding-bottom: ptr(12);
+	}
+
+	&-top {
+		padding: ptr(30) 0 ptr(30);
+
+		@include media-breakpoint-up(lg) {
+			padding-top: ptr(60);
+		}
+
+		.row {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				bottom: ptr(-30);
+				border-bottom: 1px solid rgba(0, 0, 0, .1);
+			}
+		}
+
+		&__heading {
+			font-size: ptr(20);
+		}
+
+		.widget {
+			margin-bottom: ptr(30);
+		}
+	}
+
+	&-bottom {
+		font-size: ptr(15);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+
+		&__left {
+			padding: ptr(20) 0;
+
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+				padding: ptr(33) 0;
+			}
+
+			+ .footer-bottom__right {
+				padding: 0 0 ptr(20);
+
+				@include media-breakpoint-up(lg) {
+					padding: ptr(33) 0;
+				}
+			}
+		}
+
+		&__right {
+			padding: ptr(20) 0;
+
+			@include media-breakpoint-up(lg) {
+				text-align: right;
+				padding: ptr(33) 0;
+			}
+		}
+
+		a + a {
+			margin-left: ptr(20);
+		}
+	}
+}

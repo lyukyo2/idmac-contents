@@ -1,0 +1,294 @@
+/* Woonder Products for Jungle skin */
+.woonder-products {
+	display: flex;
+	flex-wrap: wrap; // On mobile we let products break into multiple rows.
+	margin: 0 ptr(-8); // Smaller gutter between products on mobile.
+
+	@include media-breakpoint-up(sm) {
+		margin: 0 ptr(-15);
+	}
+
+	@include media-breakpoint-up(lg) {
+		flex-wrap: nowrap; // On desktop, all the products are forced to be in one row.
+	}
+
+	&__container {
+		position: relative;
+
+		&:focus,
+		&:hover {
+			.woonder-products__arrow {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__item {
+		flex: 0 1 50%; // On mobile, there are up to 2 products in a row.
+		display: block;
+		position: relative;
+		padding: 0 ptr(8); // Smaller gutter between products on mobile.
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(sm) {
+			padding: 0 ptr(15);
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+
+		&:focus,
+		&:hover {
+			.woonder-product__button {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__arrow {
+		display: none;
+		position: absolute;
+		background-color: transparent;
+		border: 0;
+		top: 0;
+		bottom: 0;
+		padding: 0;
+		transition: $primary-transition;
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+
+		i {
+			color: $orange;
+			background-color: #ffffff;
+			border-radius: $border-radius;
+			height: ptr(75);
+			width: ptr(45);
+			line-height: ptr(75);
+			cursor: pointer;
+			top: calc(50% - #{ptr(37)});
+			transition: $primary-transition;
+
+			&:focus,
+			&:hover {
+				background-color: $blue-100;
+			}
+		}
+
+		&--prev {
+			left: -15px;
+			border-left: 15px solid #ffffff;
+			box-shadow: inset 10px 0 35px -30px rgba(0, 0, 0, .5);
+
+			i {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				box-shadow: 5px 0 8px 0 rgba(0, 0, 0, .1);
+			}
+		}
+
+		&--next {
+			right: -15px;
+			border-right: 15px solid #ffffff;
+			box-shadow: inset -10px 0 35px -30px rgba(0, 0, 0, .5);
+
+			i {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				box-shadow: -5px 0 8px 0 rgba(0, 0, 0, .1);
+			}
+		}
+	}
+
+	.added_to_cart {
+		display: none;
+	}
+
+	.slick-dots {
+		@include list-unstyled;
+		text-align: center;
+		margin-bottom: 0;
+		transform: translateY(-17px);
+
+		li {
+			display: inline-block;
+			margin-right: ptr(10);
+			background-color: rgba(0, 0, 0, .5);
+			border: 0;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			button {
+				display: none;
+			}
+		}
+
+		.slick-active {
+			background-color: rgba(0, 0, 0, .8);
+		}
+	}
+}
+
+.woonder-product {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+
+		@include media-breakpoint-up(lg) {
+			outline: none;
+		}
+	}
+
+	&:active {
+		img {
+			box-shadow: 0 0 3px #4a90e2;
+
+			@include media-breakpoint-up(lg) {
+				box-shadow: none;
+			}
+		}
+	}
+
+	img {
+		margin-bottom: ptr(9);
+		border-radius: $border-radius;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(17);
+		}
+
+		.widget_pw_woonder_products & {
+			width: 100%;
+		}
+	}
+
+	&__onsale {
+		position: absolute;
+		left: ptr(15);
+		top: ptr(8);
+
+		@include media-breakpoint-up(sm) {
+			left: ptr(22);
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 1.375;
+		color: $gray-800;
+		margin-bottom: ptr(1);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(4);
+		}
+	}
+
+	&__price {
+		font-size: 16px;
+		font-weight: bold;
+		color: $red;
+
+		del {
+			display: block;
+			font-size: 14px;
+			font-weight: normal;
+			color: $gray-600;
+		}
+
+		ins {
+			text-decoration: none;
+
+			.amount {
+				color: $red;
+			}
+		}
+	}
+
+	&__button {
+		display: none;
+		position: relative;
+		font-size: ptr(14);
+		font-weight: bold;
+		text-align: center;
+		letter-spacing: .2px;
+		color: #232f3f;
+		background: linear-gradient(#fbde97, #f7c128);
+		border: 1px solid #ce9f19;
+		box-shadow: inset 0 2px 0 rgba(255, 255, 255, .25);
+		border-radius: $border-radius;
+		padding: ptr(8.5) ptr(2) ptr(8.5) ptr(36);
+		margin-top: ptr(18);
+		cursor: pointer;
+		transition: opacity 100ms ease-out, visibility 100ms ease-out;
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: #232f3f;
+			background: #d6a721;
+			border-color: #ce9f19;
+			outline: none;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			background: #333333 url('../../images/cart_icon_full.svg');
+			background-repeat: no-repeat;
+			background-size: ptr(20) ptr(15);
+			background-position: 50%;
+			border-radius: $border-radius;
+			width: ptr(30);
+			height: ptr(30);
+			left: ptr(4);
+			top: calc(50% - #{ptr(15)});
+		}
+
+		&::after {
+			display: inline-block;
+			content: '';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: bold;
+			font-size: ptr(12);
+			margin-left: ptr(5);
+		}
+
+		&.loading {
+			&::after {
+				content: '\f110';
+				animation: spin 2s infinite linear;
+			}
+		}
+
+		&.added {
+			&::after {
+				content: '\f00c';
+			}
+		}
+	}
+}

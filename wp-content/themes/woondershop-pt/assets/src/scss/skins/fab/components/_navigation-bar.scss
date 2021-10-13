@@ -1,0 +1,38 @@
+/* Navigation Bar for Fab skin */
+.navigation-bar {
+	position: fixed;
+	background-color: #000000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50px;
+	transform: translateX(-100%);
+	overflow-y: scroll;
+	transition: transform 150ms ease-out;
+	z-index: 20;
+
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		display: block;
+		text-align: center;
+		background-color: transparent;
+		width: 100%;
+		transform: none;
+		overflow-y: visible;
+	}
+
+	&__container {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 100%;
+		}
+
+		+ .benefit-bar__container {
+			@include media-breakpoint-up(lg) {
+				margin-top: ptr(-25);
+			}
+		}
+	}
+}

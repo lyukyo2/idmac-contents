@@ -1,0 +1,614 @@
+/* Main Navigation for Jungle skin */
+.main-navigation {
+	@include list-unstyled;
+	font-family: $secondary-font;
+	font-size: 0; // Hack for having 0px space between menu-items.
+	margin-bottom: 0;
+
+	@include media-breakpoint-up(lg) {
+		display: inline;
+	}
+
+	.menu-item {
+		position: relative;
+		font-size: ptr(13);
+
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		// :hover colors for Main Navigation links (without sub-menus).
+		&:focus,
+		&:hover,
+		&.is-hover,
+		&[aria-expanded='true'] {
+			> a {
+				color: #ffffff;
+				background-color: #3a4857;
+				text-decoration: none;
+
+				@include media-breakpoint-up(lg) {
+					color: #ffffff;
+					background-color: transparent;
+				}
+
+				&::before {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			// 1. level sub-menus are open on :hover.
+			> .sub-menu {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	> .menu-item {
+		&:first-of-type {
+			@include media-breakpoint-up(lg) {
+				margin-left: ptr(20);
+			}
+		}
+
+		&:last-of-type {
+			@include media-breakpoint-up(lg) {
+				margin-right: ptr(20);
+			}
+		}
+
+		&.featured-dropdown {
+			margin-left: 0;
+		}
+	}
+
+	.menu-item-icon {
+		font-size: ptr(16);
+		padding-right: ptr(8);
+		transform: translateY(#{ptr(2)});
+	}
+
+	// Main Navigation Links and Colors.
+	a {
+		position: relative;
+		display: block;
+		font-weight: bold;
+		color: #ffffff;
+		border-bottom: 1px solid lighten(#141a22, 18);
+		padding: 15.5px 18px;
+
+		@include media-breakpoint-up(lg) {
+			font-weight: normal;
+			color: #c7cace;
+			border-bottom: 0;
+			padding: ptr(8) ptr(10) ptr(18);
+			z-index: 5; // changed from 15 because of ticket #16215
+		}
+
+		// Indicator below link.
+		&::before {
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				content: '';
+				visibility: hidden;
+				opacity: 0;
+				background-color: $orange;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: ptr(2);
+			}
+		}
+
+		// Dropdown icon.
+		&::after {
+			display: none;
+			content: '\f0d7';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			line-height: 1;
+			color: $gray-600;
+			margin-left: ptr(6);
+			transform: translateY(1px);
+		}
+
+		// Main Navigation Links on focus.
+		&:focus {
+			@include media-breakpoint-up(lg) {
+				text-decoration: none;
+				color: #ffffff;
+			}
+
+			// Line bellow the Main navigation link is visible on focus.
+			&::before {
+				@include media-breakpoint-up(lg) {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// Active current link.
+	> .current-menu-item {
+		&:focus,
+		&:hover {
+			> a {
+				@include media-breakpoint-up(lg) {
+					color: #ffffff;
+				}
+			}
+		}
+
+		> a {
+			@include media-breakpoint-up(lg) {
+				color: #ffffff;
+			}
+
+			// Line bellow the Main navigation link is visible on active current link.
+			&::before {
+				@include media-breakpoint-up(lg) {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// Line under link even if its menu ancestor.
+	> .current-menu-ancestor {
+		&:focus,
+		&:hover {
+			> a {
+				@include media-breakpoint-up(lg) {
+					color: #ffffff;
+				}
+			}
+		}
+
+		> a {
+			@include media-breakpoint-up(lg) {
+				color: #ffffff;
+			}
+
+			// Line bellow the Main navigation link is visible on current menu ancestor.
+			&::before {
+				@include media-breakpoint-up(lg) {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// Item with children.
+	> .menu-item-has-children {
+		// Indicator for sub-menus.
+		> a {
+			&::after {
+				@include media-breakpoint-up(lg) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.sub-menu {
+		@include list-unstyled;
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+			background-color: #ffffff;
+			box-shadow: 0 2px 25px rgba(153, 153, 153, .5);
+			border-radius: 0 0 $border-radius $border-radius;
+			z-index: 10;
+		}
+
+		.menu-item {
+			display: block;
+
+			&:focus,
+			&:hover,
+			&[aria-expanded='true'] {
+				> a {
+					background-color: #3a4857;
+
+					@include media-breakpoint-up(lg) {
+						color: #000000;
+						background-color: #e5ebf3;
+					}
+
+					.menu-item-icon {
+						@include media-breakpoint-up(lg) {
+							color: #000000;
+						}
+					}
+				}
+
+				> .sub-menu {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			&:last-of-type {
+				> a {
+					@include media-breakpoint-up(lg) {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+
+		// Sub menu links on mobile.
+		a {
+			font-family: $primary-font;
+			font-size: ptr(14);
+			font-weight: bold;
+			background-color: #242f3d;
+			border-bottom: 1px #3a4857;
+			padding-left: 30px;
+
+			// Sub menu links on desktop.
+			@include media-breakpoint-up(lg) {
+				color: #666666;
+				background-color: #ffffff;
+				border-bottom: 1px solid #e5ebf3;
+				min-width: ptr(220);
+				white-space: nowrap;
+				padding: ptr(13) ptr(20);
+			}
+
+			// Hide line below the link on sub-menus.
+			&::before {
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
+			}
+		}
+
+		// Item with children.
+		> .menu-item-has-children {
+			// Indicator for sub-menus.
+			> a {
+				&::after {
+					@include media-breakpoint-up(lg) {
+						display: inline-block;
+						position: absolute;
+						content: '\f0da';
+						right: ptr(20);
+						top: calc(50% - #{ptr(7)});
+					}
+				}
+			}
+		}
+
+		.menu-item-icon {
+			@include media-breakpoint-up(lg) {
+				color: #9097a0;
+			}
+		}
+
+		// 2. level + are opening next to each other.
+		.sub-menu {
+			left: 100%;
+			top: 0;
+		}
+
+		.main-navigation__label {
+			position: relative;
+			display: inline-block;
+			left: inherit;
+			top: inherit;
+
+			@include media-breakpoint-up(lg) {
+				margin-left: ptr(5);
+			}
+		}
+	}
+
+	.dropdown-toggle {
+		position: absolute;
+		background-color: #242f3d;
+		color: #ffffff;
+		border: 0;
+		right: 0;
+		top: 0;
+		width: 50px;
+		height: 50px;
+		outline: none;
+
+		.fas {
+			transition: $primary-transition;
+		}
+
+		&--open {
+			.fas {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	// Featured dropdown is special link with hamburger icon and separator.
+	.featured-dropdown {
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+			margin-right: ptr(70);
+		}
+
+		&.menu-item {
+			&:focus,
+			&:hover,
+			&.is-hover,
+			&[aria-expanded='true'] {
+				> a {
+					@include media-breakpoint-up(lg) {
+						color: #ffffff;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		> a {
+			padding: 14px 18px;
+
+			@include media-breakpoint-up(lg) {
+				font-size: ptr(14);
+				font-weight: bold;
+				color: #ffffff;
+				padding: ptr(5) 0 ptr(17);
+			}
+
+			.menu-item-icon {
+				font-size: ptr(21);
+				color: $gray-600;
+				transform: translateY(#{ptr(3)});
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&--without-icon {
+			> a {
+				@include media-breakpoint-up(lg) {
+					padding: ptr(7) 0 ptr(18);
+				}
+			}
+		}
+
+		> .sub-menu {
+			@include media-breakpoint-up(lg) {
+				border-radius: $border-radius;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			// triangle above the featured menu sub-menu.
+			&::before {
+				position: absolute;
+				content: '';
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-bottom: 10px solid #ffffff;
+				width: 0;
+				height: 0;
+				top: -10px;
+				left: 38px;
+				z-index: 20;
+			}
+
+			> .menu-item {
+				.menu-item-icon {
+					width: ptr(28);
+					transform: translateY(#{ptr(2)});
+				}
+
+				&:last-of-type {
+					> a {
+						@include media-breakpoint-up(lg) {
+							border-radius: $border-radius;
+							border-top-left-radius: 0;
+							border-top-right-radius: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// With .column-dropdown class dropdown will transform in "mega menu" like layout.
+	.column-dropdown {
+		@include media-breakpoint-up(lg) {
+			position: inherit;
+		}
+
+		&:focus,
+		&:hover,
+		&.is-hover,
+		&[aria-expanded='true'] {
+			// Open all sub-menus when
+			.sub-menu {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		.menu-item {
+			.sub-menu {
+				position: relative;
+				box-shadow: none;
+				left: inherit;
+				top: inherit;
+
+				a {
+					font-weight: normal;
+				}
+			}
+		}
+
+		> .sub-menu {
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				left: 0;
+				right: 0;
+			}
+
+			> .menu-item {
+				> a {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	// Mega Menu specific style
+	.smm-active {
+		@include media-breakpoint-up(lg) {
+			position: inherit;
+		}
+
+		&:focus,
+		&:hover,
+		&.is-hover,
+		&[aria-expanded='true'] {
+			// Open all sub-menus when
+			.sub-menu {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		.menu-item {
+			.sub-menu {
+				position: relative;
+				box-shadow: none;
+				left: inherit;
+				top: inherit;
+			}
+		}
+
+		> .sub-menu {
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				left: 0;
+				right: 0;
+			}
+
+			> li {
+				@include media-breakpoint-up(lg) {
+					width: 100%;
+				}
+			}
+
+			a {
+				@include media-breakpoint-up(lg) {
+					white-space: normal;
+					min-width: auto;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		.smm-mega-menu {
+			padding: 0;
+
+			@include media-breakpoint-up(lg) {
+				padding: ptr(45) ptr(75);
+			}
+		}
+
+		.widget_nav_menu {
+			.widget-title {
+				font-size: ptr(13);
+				color: #777777;
+				background-color: #242f3d;
+				border-bottom: #3a4857;
+				padding: 15.5px 30px;
+				margin-bottom: 0;
+
+				@include media-breakpoint-up(lg) {
+					font-size: ptr(21);
+					color: #333333;
+					background-color: transparent;
+					border-bottom: 0;
+					padding: 0;
+					margin-bottom: ptr(10);
+				}
+			}
+
+			.menu-item {
+				&:focus,
+				&:hover,
+				&[aria-expanded='true'] {
+					> a {
+						@include media-breakpoint-up(lg) {
+							text-decoration: underline;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+
+			a {
+				@include media-breakpoint-up(lg) {
+					font-weight: normal;
+					min-width: auto;
+					padding: ptr(5) 0;
+					border-bottom: 0;
+					white-space: normal;
+				}
+			}
+		}
+
+		.panel-grid-cell {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+
+	&__label {
+		font-size: ptr(8);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #ffffff;
+		background-color: $orange;
+		border-radius: 2px;
+		padding: 0 ptr(3);
+		margin-left: ptr(10);
+
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			margin-left: 0;
+			transform: translateY(#{ptr(-10)});
+		}
+	}
+
+	&__close {
+		position: fixed;
+		visibility: hidden;
+		opacity: 0;
+		line-height: 50px;
+		color: $black;
+		background-color: $gray-600;
+		border: 0;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		right: 0;
+		transition: visibility 300ms ease-out, opacity 300ms ease-out;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($gray-600, 6);
+		}
+	}
+}

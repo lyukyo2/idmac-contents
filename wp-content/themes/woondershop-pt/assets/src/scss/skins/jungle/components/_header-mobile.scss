@@ -1,0 +1,172 @@
+/* Header Mobile for Jungle skin */
+.header-mobile {
+	display: flex;
+	align-items: center;
+
+	@media print { // fixes bug when this element overlaid all content on print
+		&__overlay-elements {
+			display: none !important;
+		}
+	}
+
+	&__container {
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+
+		.woondershop-has-no-mobile-header-elements & {
+			margin-bottom: 0;
+		}
+
+		body.woondershop-has-mobile-sticky-header & {
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #232f3f;
+			z-index: 55;
+		}
+
+		body.woondershop-has-mobile-sticky-header.admin-bar & {
+			@media (min-width: 601px) {
+				top: 46px;
+			}
+
+			@media (min-width: 783px) {
+				top: 32px;
+			}
+		}
+
+		html:not(.pt-pb-closed) body.woondershop-has-mobile-sticky-header.pt-pb-loaded & {
+			@media (min-width: 601px) {
+				top: 54px;
+			}
+		}
+	}
+
+	&__navbar-toggler {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: ptr(24);
+		line-height: 1;
+		color: #ffffff;
+		background-color: transparent;
+		border: 0;
+		border-right: 1px solid rgba(255, 255, 255, .1);
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		margin-right: ptr(20);
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-300;
+		}
+	}
+
+	&__search {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: translateY(-100%);
+		overflow-y: scroll;
+		transition: all 150ms ease-out;
+		z-index: 10;
+	}
+
+	&__search-toggler {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: ptr(24);
+		color: #ffffff;
+		background-color: transparent;
+		border: 0;
+		border-left: 1px solid rgba(255, 255, 255, .1);
+		border-right: 1px solid rgba(255, 255, 255, .1);
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		margin-left: ptr(15);
+		cursor: pointer;
+		transition: $primary-transition;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-300;
+		}
+
+		+ .header-mobile__cart-toggler {
+			border-left: 0;
+		}
+	}
+
+	&__cart {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 50px;
+		right: 0;
+		transform: translateX(100%);
+		overflow-y: scroll;
+		transition: transform 150ms ease-out;
+		z-index: 10;
+	}
+
+	&__cart-toggler {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background-color: transparent;
+		border: 0;
+		border-left: 1px solid rgba(255, 255, 255, .1);
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		cursor: pointer;
+		transition: $primary-transition;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			color: $gray-300;
+		}
+
+		img {
+			width: 30px;
+			height: 22px;
+		}
+
+		.woondershop-cart-quantity {
+			position: absolute;
+			font-family: $secondary-font;
+			font-size: 16px;
+			font-weight: bold;
+			color: $orange;
+			top: 10px;
+			right: calc(50% - 6px);
+
+			&--two-numbers {
+				font-size: 12px;
+				top: 10px;
+				right: calc(50% - 8px);
+			}
+
+			&--two-numbers-plus {
+				font-size: 11px;
+				top: 8px;
+				right: calc(50% - 14px);
+			}
+		}
+	}
+}

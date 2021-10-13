@@ -1,0 +1,45 @@
+/* Featured product for Fab skin */
+.featured-product {
+	&:hover,
+	&:focus {
+		.featured-product__image {
+			img {
+				transform: translateY(#{ptr(-10)});
+			}
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+			margin-bottom: ptr(29);
+			transition: $primary-transition;
+		}
+	}
+
+	&__content {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: normal;
+		margin-bottom: ptr(9);
+
+		a {
+			color: $black;
+
+			&:focus,
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+
+	&__price {
+		font-size: 15px;
+		font-weight: bold;
+		color: $green;
+		margin-bottom: 0;
+	}
+}

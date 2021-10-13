@@ -1,0 +1,69 @@
+/* Mobile Sort */
+.mobile-sort {
+	position: fixed;
+	font-size: ptr(14);
+	background-color: #ffffff;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50px;
+	transform: translateX(-100%);
+	overflow-y: scroll;
+	transition: transform 150ms ease-out;
+	z-index: 10;
+
+	&__header {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		padding: ptr(17) ptr(25);
+
+		&-title {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.fas {
+			font-size: ptr(22);
+			color: $gray-600;
+		}
+	}
+
+	&__item {
+		display: block;
+		padding: ptr(17) ptr(25);
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+		&:focus,
+		&:hover {
+			font-weight: bold;
+			background-color: $gray-100;
+			text-decoration: none;
+		}
+
+		&--active {
+			font-weight: bold;
+		}
+	}
+
+	&__close {
+		position: fixed;
+		visibility: hidden;
+		opacity: 0;
+		line-height: 50px;
+		color: $black;
+		background-color: $gray-600;
+		border: 0;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		right: 0;
+		transition: visibility 300ms ease-out, opacity 300ms ease-out;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($gray-600, 6);
+		}
+	}
+}

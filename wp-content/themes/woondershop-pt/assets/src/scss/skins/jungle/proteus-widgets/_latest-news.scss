@@ -1,0 +1,196 @@
+/* Latest News for Jungle skin */
+.latest-news {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	height: 100%;
+	transition: $primary-transition;
+
+	// Empty line bellow article which prevent jittering.
+	&::after {
+		position: absolute;
+		content: '';
+		display: none;
+		background-color: transparent;
+		left: 0;
+		right: 0;
+		bottom: ptr(-10);
+		height: ptr(10);
+	}
+
+	&__image {
+		flex-shrink: 0;
+		width: 100%;
+		border-radius: $border-radius;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		margin-bottom: 0;
+
+		+ .latest-news__content {
+			border-top: 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-between;
+		flex: 1 1 auto;
+		border: 1px solid $gray-300;
+		transition: $primary-transition;
+	}
+
+	&__header {
+		width: 100%;
+	}
+
+	&__date {
+		display: inline-block;
+		font-size: ptr(15);
+		color: $body-color;
+		width: 100%;
+		margin-bottom: ptr(13);
+	}
+
+	&__title {
+		font-size: ptr(16);
+		margin-bottom: 0;
+	}
+
+	&__title-link {
+		display: block;
+		padding: ptr(27) ptr(30) ptr(27);
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__categories {
+		padding: 0 ptr(30) ptr(16);
+
+		a {
+			font-size: ptr(13);
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .5px;
+			color: $gray-600;
+		}
+	}
+
+	&__more-news {
+		display: inline-block;
+		position: relative;
+		font-size: ptr(14);
+		font-weight: bold;
+		color: $blue;
+		width: 100%;
+		padding: 0 ptr(30) ptr(23);
+		margin-top: ptr(-8);
+
+		&::after {
+			content: '\f30b';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			margin-left: ptr(5);
+		}
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+
+	&--block {
+		border-radius: $border-radius;
+
+		.latest-news {
+			&__content {
+				border: 1px solid $gray-300;
+				border-top: 0;
+				border-radius: $border-radius;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+			transform: translateY(#{ptr(-20)});
+
+			&::after {
+				display: block;
+			}
+
+			.latest-news__more-link {
+				color: $black;
+			}
+		}
+	}
+
+	&--inline {
+		&:first-child {
+			.latest-news__content {
+				border-radius: $border-radius;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&:last-child {
+			.latest-news__content {
+				border-radius: $border-radius;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+
+		.latest-news {
+			&__content {
+				padding: ptr(30) ptr(40);
+			}
+		}
+
+		+ .latest-news {
+			&--inline {
+				.latest-news__content {
+					border-top: 0;
+				}
+			}
+		}
+
+		&:focus,
+		&:hover {
+			color: $black;
+
+			.latest-news__title {
+				color: $black;
+			}
+		}
+	}
+
+	&--more-news {
+		display: inline-block;
+		position: relative;
+		font-size: ptr(14);
+		font-weight: bold;
+		color: $black;
+		border: 1px solid $gray-300;
+		border-top: 0;
+		border-radius: $border-radius;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		width: 100%;
+		padding: ptr(30) ptr(40);
+
+		&:focus,
+		&:hover {
+			color: $black;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+/* Accordion */
+.accordion {
+	&__panel {
+		margin-bottom: ptr(2);
+
+		.panel-title {
+			margin-bottom: 0;
+
+			a {
+				position: relative;
+				display: block;
+				font-size: ptr(18);
+				font-weight: bold;
+				color: theme-color('primary');
+				background-color: $gray-300;
+				padding: ptr(18) ptr(60) ptr(18) ptr(25);
+				transition: $primary-transition;
+
+				&::after {
+					position: absolute;
+					content: '\f00d';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					text-align: center;
+					line-height: ptr(26);
+					color: theme-color('primary');
+					top: calc(50% - #{ptr(12.5)});
+					right: ptr(20);
+					width: ptr(25);
+					height: ptr(25);
+				}
+
+				&.collapsed {
+					color: theme-color('primary');
+					background-color: $gray-100;
+
+					&::after {
+						content: '\f067';
+						color: $gray-600;
+					}
+				}
+
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					background-color: $gray-300;
+
+					&::after {
+						color: theme-color('primary');
+					}
+				}
+			}
+		}
+	}
+
+	&__content {
+		.panel-body {
+			font-size: ptr(18);
+			color: #777777;
+			padding: ptr(22) ptr(20);
+		}
+	}
+
+	.more-link {
+		position: relative;
+		display: block;
+		font-weight: bold;
+		font-size: ptr(16);
+		text-transform: inherit;
+		color: theme-color('primary');
+		background-color: $gray-100;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: ptr(18) ptr(60) ptr(18) ptr(25);
+		transition: $primary-transition;
+
+		&::after {
+			position: absolute;
+			content: '\f067';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			text-align: center;
+			line-height: ptr(26);
+			color: $gray-600;
+			top: calc(50% - #{ptr(12.5)});
+			right: ptr(20);
+			width: ptr(25);
+			height: ptr(25);
+		}
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			background-color: $gray-300;
+
+			&::after {
+				color: theme-color('primary');
+			}
+		}
+	}
+}
+

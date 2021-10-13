@@ -1,0 +1,111 @@
+/* Overlay and Overlaid Elements */
+.woondershop-overlay {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	background-color: #000000;
+	z-index: $zindex-woondershop-overlay;
+	transition: all 150ms ease-out;
+	transition-delay: 150ms;
+}
+
+.active-overlaid-element {
+	@include media-breakpoint-down(md) {
+		overflow-y: hidden;
+	}
+
+	.woondershop-overlay {
+		visibility: visible;
+		opacity: .75;
+
+		@include media-breakpoint-up(lg) {
+			opacity: .5;
+		}
+	}
+
+	&--navigation {
+		.navigation-bar {
+			z-index: $zindex-over-admin-bar;
+			transform: translateX(0);
+		}
+
+		.main-navigation__close {
+			z-index: $zindex-over-admin-bar;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&--search {
+		.woondershop-overlay {
+			display: none;
+		}
+
+		.header-mobile__search {
+			z-index: $zindex-over-admin-bar;
+			transform: translateX(0);
+		}
+	}
+
+	&--cart {
+		.header-mobile__cart {
+			z-index: $zindex-over-admin-bar;
+			transform: translateX(0);
+		}
+
+		.mobile-cart__close {
+			z-index: $zindex-over-admin-bar;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&--header-search {
+		.header__widgets {
+			.widget_search {
+				.smart-search-results {
+					z-index: $zindex-over-admin-bar;
+				}
+
+				label {
+					z-index: ($zindex-over-admin-bar + 10);
+				}
+
+				.search-submit {
+					z-index: ($zindex-over-admin-bar + 10);
+				}
+			}
+		}
+	}
+
+	&--filter {
+		.mobile-filter {
+			z-index: $zindex-over-admin-bar;
+			transform: translateX(0);
+		}
+
+		.mobile-filter__close {
+			z-index: $zindex-over-admin-bar;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&--sort {
+		.mobile-sort {
+			z-index: $zindex-over-admin-bar;
+			transform: translateX(0);
+		}
+
+		.mobile-sort__close {
+			z-index: $zindex-over-admin-bar;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+/* 05.32. Instagram for Fab skin */
+.pw-instagram {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+	@include media-breakpoint-up(md) {
+		flex-wrap: nowrap;
+	}
+
+	&__item {
+		display: block;
+		flex: 0 1 calc(50% - #{map-get($spacers, 2)});
+		transition: transform 200ms ease-out;
+		margin-bottom: map-get($spacers, 2);
+
+		@include media-breakpoint-up(md) {
+			flex: 0 1 auto;
+			margin: map-get($spacers, 1);
+			width: 100%;
+		}
+
+		&:hover {
+			z-index: 10;
+			transform: translateY(ptr(-20));
+
+			.pw-instagram__photo {
+				box-shadow: 0 2px 25px 0 rgba(153, 153, 153, .5);
+			}
+		}
+
+		&--cta {
+			min-width: ptr(120);
+			border-radius: $border-radius;
+			position: relative;
+			background-color: $purple;
+			transition: transform 200ms ease-out, background-color 200ms ease-out;
+
+			.pw-instagram__photo { // fix for the size of the CTA element
+				visibility: hidden;
+				height: 1px !important;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background-color: lighten($purple, 6);
+				box-shadow: 0 2px 25px 0 rgba(153, 153, 153, .5);
+			}
+		}
+	}
+
+	&__photo {
+		width: 100%;
+		height: 100% !important;
+		object-fit: cover;
+		border-radius: $border-radius;
+	}
+
+	&__inner-spacer {
+		padding: map-get($spacers, 3);
+
+		@include media-breakpoint-up(md) {
+			padding-bottom: map-get($spacers, 5);
+		}
+	}
+
+	&__title {
+		display: none;
+
+		@include media-breakpoint-up(xl) {
+			display: block;
+			color: $white;
+		}
+	}
+
+	&__text {
+		display: none;
+		margin-bottom: 0;
+
+		@include media-breakpoint-up(xl) {
+			display: block;
+			color: rgba(255, 255, 255, .5);
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: $white;
+
+		@include media-breakpoint-up(xl) {
+			top: unset;
+			left: map-get($spacers, 3);
+			bottom: map-get($spacers, 3);
+			transform: none;
+		}
+	}
+}
+
+// Embeded Instagram code
+.instagram-media {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}

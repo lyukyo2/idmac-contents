@@ -1,0 +1,388 @@
+/* WooCommerce Cart Page for Fab skin */
+
+// WooCommerce cart form
+.woocommerce-cart-form {
+	font-size: ptr(14);
+
+	&__contents {
+		border: 0;
+	}
+
+	thead {
+		font-weight: bold;
+		color: $gray-600;
+		background-color: $gray-100;
+
+		th {
+			padding: ptr(14.5) ptr(5);
+		}
+	}
+
+	th,
+	td {
+		border: 0;
+		padding: ptr(10) ptr(5);
+	}
+
+	&__cart-item {
+		display: block;
+		position: relative;
+		background-color: $gray-100;
+		border-radius: $border-radius;
+		padding: ptr(30);
+		margin-bottom: ptr(20);
+		transition: $primary-transition;
+
+		@include media-breakpoint-up(lg) {
+			display: table-row;
+			background-color: transparent;
+			border-radius: 0;
+			padding: 0;
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			@include media-breakpoint-up(lg) {
+				background-color: #fdfdfd;
+			}
+		}
+
+		td {
+			@include media-breakpoint-up(lg) {
+				border-bottom: 1px solid $gray-100;
+			}
+		}
+	}
+
+	.product-remove {
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			right: ptr(20);
+		}
+
+		@include media-breakpoint-up(lg) {
+			width: ptr(100);
+			padding-left: 0;
+		}
+
+		.remove {
+			display: block;
+			font-size: ptr(30);
+			font-weight: bold;
+			line-height: ptr(32);
+			text-align: center;
+			color: $gray-600;
+			background-color: transparent;
+			border-radius: 2px;
+			width: ptr(30);
+			height: ptr(30);
+			transition: $primary-transition;
+
+			@include media-breakpoint-up(lg) {
+				font-size: ptr(18);
+				background-color: $gray-200;
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				color: #ffffff;
+				background-color: $red;
+			}
+		}
+	}
+
+	.product-thumbnail {
+		@include media-breakpoint-up(lg) {
+			width: ptr(80);
+		}
+	}
+
+	.product-name {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			justify-content: space-between;
+			text-align: right;
+		}
+
+		&::before {
+			font-weight: normal;
+			color: $gray-600;
+			margin-right: ptr(15);
+		}
+	}
+
+	.product-price {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include media-breakpoint-up(lg) {
+			word-break: break-word;
+			width: ptr(95);
+		}
+
+		&::before {
+			font-weight: normal;
+			color: $gray-600;
+		}
+	}
+
+	.product-quantity {
+		@include media-breakpoint-up(lg) {
+			width: ptr(170);
+		}
+
+		&::before {
+			display: none;
+		}
+
+		.quantity {
+			display: inline-block;
+
+			.input-text {
+				@include media-breakpoint-down(md) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.product-subtotal {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include media-breakpoint-up(lg) {
+			word-break: break-word;
+			width: ptr(95);
+		}
+
+		&::before {
+			font-weight: normal;
+			color: $gray-600;
+		}
+	}
+
+	// Actions (Cupon code and Update cart buttons) under the Cart.
+	.actions {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+
+		@include media-breakpoint-up(sm) {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+
+		@include media-breakpoint-up(lg) {
+			display: table-cell;
+			padding-top: ptr(20);
+		}
+
+		.input-text {
+			+ .button {
+				margin-top: ptr(8);
+
+				@include media-breakpoint-up(sm) {
+					margin-top: 0;
+					margin-left: ptr(-5);
+					vertical-align: top;
+				}
+			}
+		}
+
+		.coupon {
+			order: 2;
+			border-top: 1px solid rgba(0, 0, 0, .1);
+			padding-top: ptr(15);
+			margin-top: ptr(15);
+
+			@include media-breakpoint-up(sm) {
+				order: 1;
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+			.input-text {
+				font-size: 16px;
+				padding: ptr(11) ptr(20);
+
+				@include media-breakpoint-up(lg) {
+					font-size: ptr(14);
+					padding: ptr(13.5) ptr(20);
+				}
+			}
+		}
+
+		.button {
+			order: 1;
+			width: 100%;
+			cursor: pointer;
+
+			@include media-breakpoint-up(sm) {
+				order: 2;
+				width: auto;
+			}
+		}
+	}
+}
+
+// Different style for WooCommerce cart page header.
+.woocommerce-cart {
+	.page-header {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+// WooCommerce Cart Collaterals
+.cart-collaterals {
+	.cart_totals {
+		@include media-breakpoint-up(lg) {
+			width: 40%;
+		}
+
+		@include media-breakpoint-up(xl) {
+			width: 30%;
+		}
+
+		h2 {
+			display: none;
+		}
+	}
+
+	.shop_table {
+		font-size: ptr(16);
+		background-color: $gray-100;
+		border: 0;
+		padding: ptr(10) ptr(20);
+		margin-top: 0;
+		margin-bottom: ptr(20);
+		border-collapse: separate;
+
+		.order-total {
+			border-top: 1px solid $gray-300;
+		}
+
+		tbody {
+			display: block;
+		}
+
+		tr {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.shipping {
+			display: block;
+
+			> td {
+				text-align: left;
+				padding: 0;
+			}
+		}
+
+		#shipping_method {
+			@include list-unstyled;
+			text-align: left;
+			margin-bottom: ptr(5);
+
+			input {
+				margin-right: ptr(10);
+			}
+		}
+
+		.woocommerce-shipping-calculator {
+			text-align: left;
+
+			> p {
+				margin-bottom: 0;
+			}
+
+			.shipping-calculator-button {
+				display: block;
+				background-color: $gray-300;
+				border-radius: $border-radius;
+				padding: ptr(6) ptr(15);
+				margin-top: ptr(8);
+				margin-bottom: ptr(20);
+
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					background-color: $gray-400;
+				}
+			}
+
+			.shipping-calculator-form {
+				p {
+					margin-bottom: ptr(20);
+				}
+
+				#calc_shipping_country_field {
+					margin-bottom: ptr(24);
+				}
+
+				.button {
+					width: 100%;
+				}
+			}
+		}
+
+		th {
+			display: block;
+			font-weight: normal;
+			border: 0;
+			padding: ptr(14) 0;
+		}
+
+		td {
+			display: block;
+			font-weight: bold;
+			text-align: right;
+			border: 0;
+			padding: ptr(14) 0;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	.wc-proceed-to-checkout {
+		.checkout-button {
+			display: block;
+			font-size: ptr(18);
+			letter-spacing: .5px;
+			text-align: center;
+			background-color: theme-color('success');
+			border-color: theme-color('success');
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// Mobile notifications for cart page.
+.ws-woocommerce-coupon-code-notification {
+	position: sticky;
+	top: ptr(90);
+	z-index: 20;
+
+	.admin-bar & {
+		top: ptr(140);
+	}
+
+	&__close {
+		position: absolute;
+		right: ptr(15);
+	}
+}

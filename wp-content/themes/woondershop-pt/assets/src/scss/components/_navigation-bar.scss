@@ -1,0 +1,36 @@
+/* Navigation Bar */
+.navigation-bar {
+	position: fixed;
+	background-color: #000000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50px;
+	transform: translateX(-100%);
+	overflow-y: scroll;
+	transition: transform 150ms ease-out;
+	z-index: 20;
+
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		display: block;
+		border-radius: 2px;
+		background: linear-gradient(#3b3b3b 2%, #000000);
+		box-shadow: 0 1px 1px rgba(153, 153, 153, .38);
+		width: 100%;
+		transform: none;
+		overflow-y: visible;
+	}
+
+	&__container {
+		@include media-breakpoint-up(lg) {
+			padding-bottom: ptr(25);
+		}
+
+		+ .benefit-bar__container {
+			@include media-breakpoint-up(lg) {
+				margin-top: ptr(-25);
+			}
+		}
+	}
+}

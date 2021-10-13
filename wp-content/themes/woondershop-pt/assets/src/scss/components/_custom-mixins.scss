@@ -1,0 +1,103 @@
+/* Custom Mixins */
+
+// Default form style.
+@mixin form-style() {
+	display: block;
+	font-size: 16px;
+	color: theme-color('primary');
+	border: 1px solid $gray-300;
+	border-radius: $border-radius;
+	padding: ptr(12) ptr(20);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	transition: $primary-transition;
+
+	&::placeholder {
+		color: $gray-600;
+	}
+
+	&:hover {
+		border-color: $gray-600;
+	}
+
+	&:focus {
+		border-color: theme-color('primary');
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+// Default WooCommerce style for review order table. For example order table on checkout page, received order page etc.
+@mixin review-order-table() {
+	margin-bottom: ptr(30);
+	border: 0;
+
+	.product-name {
+		max-width: ptr(300);
+		word-wrap: break-word;
+	}
+
+	// Title for product name and price.
+	thead {
+		font-size: ptr(16);
+
+		th {
+			font-weight: normal;
+			padding-top: 0;
+		}
+	}
+
+	// Cart item/product, name and price.
+	tbody {
+		font-size: ptr(14);
+		color: #777777;
+
+		tr:last-of-type {
+			td,
+			th {
+				border-bottom: 2px solid $gray-800;
+			}
+		}
+	}
+
+	// Cart subtotal, shipping, order total.
+	tfoot {
+		font-size: ptr(16);
+
+		td {
+			font-weight: bold;
+			text-align: right;
+		}
+
+		th {
+			font-weight: normal;
+		}
+	}
+
+	td,
+	th {
+		border: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		padding: ptr(14) 0;
+	}
+
+	.product-total {
+		text-align: right;
+	}
+}
+
+// Default WooCommerce style for navigation links. For example WooCommerce tabs navigation, my account navigation etc.
+@mixin navigation-links() {
+	display: block;
+	font-size: ptr(14);
+	font-weight: bold;
+	background-color: $gray-100;
+	border-radius: $border-radius;
+	padding: ptr(14) ptr(20);
+	transition: $primary-transition;
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		background-color: $gray-300;
+	}
+}

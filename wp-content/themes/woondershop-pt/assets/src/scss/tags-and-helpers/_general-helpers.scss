@@ -1,0 +1,16 @@
+/* General Helpers */
+.screen-reader-text {
+	@extend .sr-only;
+}
+
+.content-area {
+	margin-bottom: ptr(100);
+
+	.page-template-template-empty & {
+		margin-bottom: 0;
+	}
+}
+
+.form-control {
+	@include form-style();
+}

@@ -1,0 +1,23 @@
+/* Page Header for Jungle skin */
+.page-header {
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: ptr(16);
+	margin-bottom: ptr(20);
+
+	&__title {
+		font-size: ptr(24);
+		color: $black;
+		margin-top: ptr(8);
+		margin-bottom: 0;
+
+		+ .page-header__subtitle {
+			margin-top: ptr(7);
+		}
+	}
+
+	&__subtitle {
+		font-size: ptr(14);
+		color: #666666;
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,155 @@
+/* WPML language widget */
+
+// scss-lint:disable SelectorFormat IdSelector NestingDepth
+
+.header__widgets {
+	#lang_sel, // Old WPML ID.
+	.wpml-ls {
+		position: relative;
+		display: inline-block;
+		height: auto;
+		width: 100%;
+		z-index: 25;
+
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			li:hover ul {
+				visibility: visible;
+			}
+
+			ul {
+				visibility: hidden;
+				position: absolute;
+				height: 0;
+				top: 100%;
+				left: 0;
+				border-top: 0;
+				z-index: 10000;
+				right: 0;
+				white-space: nowrap;
+
+				a {
+					background-color: #f4f4f4;
+					height: auto;
+					transition: $primary-transition;
+
+					&:hover {
+						background-color: #eeeeee;
+					}
+
+					&:visited {
+						background-color: #f4f4f4;
+						height: auto;
+						color: #000000;
+						line-height: 1;
+
+						&:hover {
+							background-color: #eeeeee;
+						}
+					}
+				}
+
+				li {
+					min-width: ptr(120);
+				}
+			}
+		}
+
+		li {
+			position: relative;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			z-index: 1;
+
+			@include media-breakpoint-up(lg) {
+				width: auto;
+			}
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			font-size: ptr(13);
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #000000;
+			border: 0;
+			background-color: transparent;
+			padding: 18px 10px;
+			line-height: 1;
+			transition: $primary-transition;
+
+			&:hover {
+				background-color: #f4f4f4;
+				color: #000000;
+			}
+
+			&.lang_sel_sel {
+				position: relative;
+				background-image: none;
+
+				&::after {
+					position: relative;
+					content: '\f107';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					right: 0;
+					top: calc(50% - #{ptr(6)});
+					font-size: ptr(10);
+					color: #000000;
+					margin-left: ptr(8);
+				}
+			}
+		}
+
+		.iclflag,
+		.wpml-ls-flag {
+			width: 18px;
+			height: 12px;
+			position: relative;
+			margin-right: ptr(4);
+			top: ptr(-1);
+
+			+ span {
+				margin-left: 0;
+			}
+		}
+
+		.wpml-ls-flag {
+			margin-right: ptr(8);
+		}
+
+		.wpml-ls-current-language:hover > a,
+		.wpml-ls-current-language > a:focus {
+			color: #000000;
+			background-color: #f4f4f4;
+		}
+	}
+
+	.wpml-ls-legacy-dropdown {
+		a {
+			&.wpml-ls-item-toggle {
+				&::after {
+					position: relative;
+					content: '\f107';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					right: 0;
+					top: calc(50% - #{ptr(6)});
+					font-size: ptr(10);
+					color: #000000;
+					border: 0;
+					margin-left: ptr(8);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* General Helpers for Fab skin */
+.screen-reader-text {
+	@extend .sr-only;
+}
+
+.content-area {
+	margin-bottom: ptr(100);
+
+	.page-template-template-empty & {
+		margin-bottom: 0;
+	}
+
+	.woocommerce & {
+		margin-bottom: ptr(40);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(100);
+		}
+	}
+}
+
+.form-control {
+	@include form-style();
+}

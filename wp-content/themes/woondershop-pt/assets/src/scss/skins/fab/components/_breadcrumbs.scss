@@ -1,0 +1,37 @@
+/* Breadcrumbs */
+.breadcrumbs {
+	padding-top: ptr(16);
+	padding-bottom: ptr(16);
+	font-size: ptr(16);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+	a {
+		font-weight: bold;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+
+			span {
+				text-decoration: underline;
+			}
+		}
+
+		&::after {
+			content: '\f0da';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			opacity: .5;
+			margin-right: ptr(20);
+			margin-left: ptr(20);
+		}
+	}
+
+	.current-item {
+		font-weight: normal;
+
+		&::after {
+			display: none;
+		}
+	}
+}

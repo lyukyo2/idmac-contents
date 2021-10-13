@@ -1,0 +1,8 @@
+/* ProteusThemes preview bar fixes */
+.pt-pb.pt-pb {
+	z-index: ($zindex-over-admin-bar - 10);
+}
+
+.pt-pb__reopen.pt-pb__reopen {
+	z-index: ($zindex-over-admin-bar - 11);
+}

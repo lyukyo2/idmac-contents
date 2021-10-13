@@ -1,0 +1,570 @@
+/* WooCommerce Single Product page */
+
+// WooCommerce Tabs. Description, Reviews, Additional Information etc under the single product.
+.product {
+	// Add spacing below sale label if product is on sale.
+	.onsale ~ .entry-summary {
+		margin-top: ptr(14);
+	}
+
+	// Product main image and gallery
+	.woocommerce-product-gallery {
+		position: relative;
+		display: flex;
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(lg) {
+			float: left;
+			width: 54%;
+			margin-right: ptr(60);
+			margin-bottom: 0;
+		}
+
+		&__wrapper {
+			margin-bottom: 0;
+		}
+
+		&__image {
+			border-radius: $border-radius;
+		}
+
+		&__trigger {
+			position: absolute;
+			visibility: hidden;
+			top: ptr(10);
+			right: ptr(15);
+			z-index: 5;
+
+			&::after {
+				visibility: visible;
+				content: '\f00e';
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				color: $gray-600;
+				transition: $primary-transition;
+			}
+
+			img {
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+
+				&::after {
+					color: #000000;
+				}
+			}
+		}
+
+		.flex-viewport {
+			order: 2;
+		}
+
+		.flex-control-thumbs {
+			@include list-unstyled;
+			order: 1;
+			margin-right: ptr(10);
+			margin-bottom: 0;
+
+			@include media-breakpoint-up(lg) {
+				margin-right: ptr(25);
+			}
+
+			li {
+				width: ptr(60);
+				margin-bottom: ptr(10);
+				cursor: pointer;
+
+				@include media-breakpoint-up(lg) {
+					width: ptr(80);
+					margin-bottom: ptr(20);
+				}
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			.flex-active-container {
+				img {
+					box-shadow: 0 0 0 2px #000000;
+				}
+			}
+
+			img {
+				border-radius: $border-radius;
+			}
+		}
+	}
+
+	// All main product informations like title, price, small descrition, quantity, add to cart button, reviews etc.
+	.entry-summary {
+		@include media-breakpoint-up(lg) {
+			width: calc(46% - #{ptr(60)});
+			float: right;
+		}
+	}
+
+	.woocommerce-product-rating {
+		margin-bottom: ptr(10);
+
+		.star-rating {
+			float: left;
+		}
+
+		.woocommerce-review-link {
+			font-size: ptr(14);
+			color: $gray-600;
+			margin-left: ptr(6);
+		}
+	}
+
+	.product_title {
+		font-size: ptr(36);
+		margin-bottom: ptr(9);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(18);
+		}
+	}
+
+	.price {
+		display: flex;
+		align-items: center;
+		margin-bottom: ptr(9);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(18);
+		}
+
+		.amount {
+			font-size: ptr(36);
+			font-weight: bold;
+			color: #000000;
+		}
+
+		del {
+			order: 2;
+			color: $gray-600;
+
+			.amount {
+				font-weight: normal;
+				color: $gray-600;
+			}
+		}
+
+		ins {
+			order: 1;
+			text-decoration: none;
+			margin-right: ptr(20);
+
+			.amount {
+				color: $red;
+			}
+		}
+	}
+
+	.woocommerce-product-details__short-description {
+		font-size: ptr(16);
+		margin-bottom: ptr(30);
+
+		p {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.woocommerce-variation {
+		&-price {
+			.price {
+				margin-bottom: ptr(29);
+			}
+		}
+	}
+
+	.cart {
+		.variations {
+			border: 0;
+			margin-bottom: ptr(30);
+
+			tbody {
+				display: flex;
+
+				tr {
+					flex: 1 1 0;
+
+					&:not(:last-of-type) {
+						margin-right: ptr(20);
+					}
+				}
+
+				td {
+					display: block;
+					border: 0;
+					padding: 0;
+				}
+
+				.label {
+					font-size: ptr(16);
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+			}
+
+			.reset_variations {
+				display: none !important;
+				position: relative;
+				float: right;
+				font-size: ptr(13);
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $gray-600;
+				margin-top: ptr(5);
+				transition: $primary-transition;
+
+				&::before {
+					content: '\f00d';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					padding-right: ptr(5);
+				}
+
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					color: $red;
+				}
+			}
+		}
+
+		.woocommerce-variation-description {
+			font-size: ptr(16);
+			margin-bottom: ptr(30);
+
+			p {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.quantity {
+			margin-bottom: ptr(20);
+
+			@include media-breakpoint-up(sm) {
+				float: left;
+				margin-right: ptr(20);
+				margin-bottom: 0;
+			}
+
+			.qty {
+				width: 100%;
+
+				@include media-breakpoint-up(sm) {
+					width: ptr(50);
+				}
+			}
+
+			.ui-spinner-button {
+				@include media-breakpoint-up(sm) {
+					width: ptr(50);
+				}
+			}
+
+			+ .single_add_to_cart_button {
+				@include media-breakpoint-up(sm) {
+					width: calc(100% - #{ptr(170)});
+				}
+			}
+
+			&.hidden {
+				+ .single_add_to_cart_button {
+					width: 100%;
+				}
+			}
+		}
+
+		.single_add_to_cart_button {
+			font-size: ptr(18);
+			text-align: center;
+			background-color: $green;
+			border: 1px solid $green;
+			width: 100%;
+			padding: ptr(10.5) ptr(30);
+			transition: $primary-transition;
+			cursor: pointer;
+
+			&:focus,
+			&:hover {
+				background-color: darken($green, 6);
+				border-color: darken($green, 6);
+				outline: none;
+			}
+
+			&:active:hover {
+				background-color: darken($green, 12);
+				border-color: darken($green, 12);
+				outline: none;
+			}
+		}
+	}
+
+	.product_meta {
+		font-size: ptr(14);
+		padding-top: ptr(30);
+
+		.sku_wrapper,
+		.posted_in,
+		.tagged_as {
+			display: block;
+		}
+	}
+
+	// Upsell and related products at the end of the single product page.
+	.upsells,
+	.related {
+		@include clearfix;
+		display: inline-block;
+		width: 100%;
+		clear: both;
+		margin-top: ptr(45);
+
+		> h2 {
+			text-align: center;
+			margin-bottom: ptr(51);
+		}
+
+		.price {
+			.amount {
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+.woocommerce-tabs {
+	@include clearfix;
+	display: inline-block;
+	border-bottom: 1px solid $gray-200;
+	width: 100%;
+	padding-bottom: ptr(30);
+	margin-top: ptr(40);
+	clear: both;
+	overflow: hidden;
+
+	@include media-breakpoint-up(lg) {
+		margin-top: ptr(80);
+	}
+
+	.tabs {
+		@include list-unstyled;
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(md) {
+			width: 20%;
+			float: left;
+			margin-right: 60px;
+			margin-bottom: 0;
+		}
+
+		li {
+			&:not(:last-of-type) {
+				margin-bottom: 2px;
+			}
+		}
+
+		.active {
+			a {
+				position: relative;
+				background-color: $gray-300;
+
+				&::after {
+					@include media-breakpoint-up(lg) {
+						position: absolute;
+						content: '';
+						width: 0;
+						height: 0;
+						top: 0;
+						right: -10px;
+						border-left: 10px solid $gray-300;
+						border-top: 25px solid transparent;
+						border-bottom: 25px solid transparent;
+					}
+				}
+			}
+		}
+
+		a {
+			@include navigation-links;
+		}
+	}
+
+	.woocommerce-Tabs-panel {
+		font-size: ptr(14);
+
+		@include media-breakpoint-up(md) {
+			width: calc(80% - 60px);
+			float: right;
+		}
+
+		> h2 {
+			font-size: ptr(18);
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .5px;
+			margin-bottom: ptr(20);
+		}
+	}
+
+	// Reviews for single product.
+	.woocommerce-Reviews {
+		#comments {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.woocommerce-Reviews-title,
+		.comment-reply-title {
+			display: block;
+			font-size: ptr(18);
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .5px;
+			margin-bottom: ptr(20);
+		}
+
+		// <ol> parent for all the comments inside <li>.
+		.commentlist {
+			@include list-unstyled;
+
+			.children {
+				@include list-unstyled;
+				float: right;
+				width: 90%;
+				margin: 0;
+			}
+		}
+
+		// Single comments.
+		.comment_container {
+			display: inline-block;
+			background-color: $gray-100;
+			border-radius: $border-radius;
+			padding: ptr(16) ptr(22);
+			margin-bottom: ptr(30);
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				padding: ptr(32) ptr(44);
+			}
+
+			.avatar {
+				float: left;
+				border-radius: 50%;
+				width: ptr(75);
+				height: auto;
+				margin-right: ptr(30);
+			}
+
+			.woocommerce-review__author {
+				margin-right: ptr(10);
+			}
+
+			.woocommerce-review__published-date {
+				color: $gray-600;
+			}
+
+			.star-rating {
+				font-size: ptr(14);
+				height: ptr(20);
+				width: ptr(74);
+
+				@include media-breakpoint-up(md) {
+					float: right;
+				}
+			}
+
+			.meta {
+				margin-top: ptr(10);
+				margin-bottom: ptr(10);
+			}
+
+			.description {
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			// Dash between Author and Date.
+			.woocommerce-review__dash {
+				display: none;
+			}
+		}
+
+		// Add a review comment form
+		.comment-form-rating {
+			margin-bottom: ptr(10);
+
+			label {
+				display: block;
+			}
+		}
+
+		.comment-form-comment {
+			margin-bottom: 0;
+
+			label {
+				display: block;
+			}
+
+			textarea {
+				width: 100%;
+				height: ptr(100);
+				margin-bottom: ptr(15);
+
+				@include media-breakpoint-up(lg) {
+					height: auto;
+				}
+			}
+		}
+
+		textarea,
+		input {
+			@include form-style;
+		}
+
+		.submit {
+			font-size: ptr(14);
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #ffffff;
+			background-color: $green;
+			border: 0;
+			border-radius: $border-radius;
+			padding: ptr(17) ptr(30);
+			cursor: pointer;
+			transition: $primary-transition;
+
+			&:focus,
+			&:hover {
+				background-color: darken($green, 6);
+				outline: none;
+			}
+		}
+	}
+
+	.shop_attributes {
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

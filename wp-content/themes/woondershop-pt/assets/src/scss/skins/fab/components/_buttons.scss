@@ -1,0 +1,57 @@
+/* Buttons for Fab skin */
+.btn {
+	font-size: ptr(18);
+	box-shadow: 5px 12px 24px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .12);
+
+	&::after {
+		content: '\f30b';
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		margin-left: ptr(20);
+	}
+
+	&-no-arrow::after {
+		content: none;
+	}
+
+	&-sm {
+		font-size: ptr(12);
+	}
+
+	&-lg {
+		font-size: ptr(14);
+	}
+
+	/* Rounded corner */
+	&-rounded {
+		border-radius: ptr(60);
+	}
+
+	&-success {
+		color: #ffffff;
+	}
+
+	&-primary {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+
+		&:focus,
+		&:hover {
+			color: #ffffff;
+			background-color: lighten(theme-color('primary'), 16);
+			border-color: lighten(theme-color('primary'), 16);
+		}
+	}
+
+	&-secondary {
+		color: #ffffff;
+		background-color: $green;
+		border-color: $green;
+
+		&:focus,
+		&:hover {
+			color: #ffffff;
+			background-color: darken($green, 12);
+			border-color: darken($green, 12);
+		}
+	}
+}

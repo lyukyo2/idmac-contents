@@ -1,0 +1,169 @@
+/*
+ Main CSS of the theme
+
+ TABLE OF CONTENTS
+	01. Project variables............Imported variables
+	02. Twitter Bootstrap............Remove what is not neccessary
+	03. Tags and Helpers.............The very general classes and tags lige <body>, <h1> etc.
+	04. Components...................Imported files, like partials, Compass etc.
+	05. WooCommerce..................All the WooCommerce style
+		05.01. WooCommerce General style..........Like buttons, inputs, notices etc.
+		05.02. WooCommerce Shop page..............Specific style for shop page, products etc.
+		05.03. WooCommerce Single Product page....Specific style for single product page.
+		05.04. WooCommerce Cart Page..............Specific style for cart page.
+		05.05. WooCommerce Checkout Page..........Specific style for checkout page.
+		05.06. WooCommerce Order Received Page....Specific style for received order page.
+		05.07. WooCommerce My Account Page........Specific style for my account page.
+		05.08. WooCommerce Widgets................Specific style for all the WooCommerce widgets.
+*/
+
+/*------------------------------------*\
+	01. Project variables
+
+	only visible in SASS source files
+\*------------------------------------*/
+
+@import 'bootstrap/scss/functions';
+@import 'skins/jungle/vars';
+@import 'skins/jungle/components/custom-mixins';
+
+/*------------------------------------*\
+	02. Twitter Bootstrap
+
+	Remove what is not necessary
+\*------------------------------------*/
+
+// Core variables and mixins
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+// // Reset and dependencies
+@import 'bootstrap/scss/print';
+
+// Core CSS
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/code';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+
+// // Components
+@import 'bootstrap/scss/transitions';
+// @import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/button-group';
+// @import 'bootstrap/scss/input-group';
+// @import 'bootstrap/scss/custom-forms';
+// @import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+// @import 'bootstrap/scss/card';
+// @import 'bootstrap/scss/breadcrumb';
+// @import 'bootstrap/scss/pagination';
+// @import 'bootstrap/scss/badge';
+// @import 'bootstrap/scss/jumbotron';
+// @import 'bootstrap/scss/alert';
+// @import 'bootstrap/scss/progress';
+// @import 'bootstrap/scss/media';
+// @import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+
+// Components w/ JavaScript
+@import 'bootstrap/scss/modal';
+// @import 'bootstrap/scss/tooltip';
+// @import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+
+// Utility classes
+@import 'bootstrap/scss/utilities';
+
+/*------------------------------------*\
+	03. Tags and Helpers
+\*------------------------------------*/
+
+@import 'skins/jungle/tags-and-helpers/general-tags';
+@import 'skins/jungle/tags-and-helpers/general-helpers';
+@import 'tags-and-helpers/overlay-and-overlaid-elements';
+@import 'tags-and-helpers/preview-bar-fixes';
+
+/*------------------------------------*\
+	04. Components
+\*------------------------------------*/
+
+// Layout
+@import 'skins/jungle/components/top-bar';
+@import 'skins/jungle/components/header';
+@import 'skins/jungle/components/header-mobile';
+@import 'skins/jungle/components/navigation-bar';
+@import 'skins/jungle/components/page-header';
+@import 'skins/jungle/components/sidebar';
+@import 'skins/jungle/components/footer';
+@import 'skins/jungle/components/blog-navigation';
+@import 'components/error-404';
+@import 'components/boxed-container';
+
+// Elements
+@import 'skins/jungle/components/main-navigation';
+@import 'skins/jungle/components/mobile-search';
+@import 'skins/jungle/components/mobile-cart';
+@import 'components/mobile-sort-and-filter';
+@import 'skins/jungle/components/mobile-filter';
+@import 'skins/jungle/components/mobile-sort';
+@import 'skins/jungle/components/breadcrumbs';
+@import 'skins/jungle/components/smart-search';
+@import 'skins/jungle/components/buttons';
+@import 'components/slider';
+@import 'skins/jungle/components/slider';
+@import 'components/contact-form-7';
+@import 'skins/jungle/components/woocommerce-product-filters';
+@import 'components/float-labels';
+
+// Proteus Widgets
+@import 'skins/jungle/proteus-widgets/icon-box';
+@import 'skins/jungle/proteus-widgets/shopping-cart';
+@import 'skins/jungle/proteus-widgets/image-banner';
+@import 'skins/jungle/proteus-widgets/testimonials';
+@import 'skins/jungle/proteus-widgets/instagram';
+@import 'skins/jungle/proteus-widgets/woonder-products';
+@import 'skins/jungle/proteus-widgets/latest-news';
+@import 'proteus-widgets/opening-time';
+@import 'skins/jungle/proteus-widgets/accordion';
+@import 'skins/jungle/proteus-widgets/title-with-button';
+@import 'proteus-widgets/mailchimp-subscribe';
+
+// WordPress Specific
+@import 'skins/jungle/components/article';
+@import 'components/article-margins';
+@import 'components/meta';
+@import 'components/wp';
+@import 'skins/jungle/components/wp-widgets';
+@import 'skins/jungle/components/pagination';
+@import 'components/comments';
+@import 'components/post-navigation';
+@import 'components/gutenberg-core';
+
+// Fonts
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'components/woonder-icons';
+
+// Slick Carousel
+@import 'slick-carousel/slick/slick.scss';
+
+/*------------------------------------*\
+	05. WooCommerce
+\*------------------------------------*/
+
+@import 'woocommerce/storefront-code';
+@import 'skins/jungle/woocommerce/woocommerce-general-style';
+@import 'skins/jungle/woocommerce/shop-page';
+@import 'skins/jungle/woocommerce/product-page';
+@import 'skins/jungle/woocommerce/cart-page';
+@import 'skins/jungle/woocommerce/checkout-page';
+@import 'woocommerce/order-received-page';
+@import 'skins/jungle/woocommerce/my-account-page';
+@import 'skins/jungle/woocommerce/woocommerce-widgets';
+@import 'woocommerce/woonder-product';

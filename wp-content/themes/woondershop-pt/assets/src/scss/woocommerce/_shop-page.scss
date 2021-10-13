@@ -1,0 +1,459 @@
+/* WooCommerce Shop page */
+
+// Product Header
+.woocommerce-result-count {
+	font-size: ptr(12);
+	color: $gray-600;
+	margin-bottom: ptr(5);
+
+	@include media-breakpoint-up(md) {
+		float: left;
+		padding: ptr(16) 0;
+		margin-bottom: ptr(18);
+	}
+}
+
+.woocommerce-ordering {
+	margin-bottom: ptr(18);
+
+	@include media-breakpoint-up(md) {
+		float: right;
+	}
+
+	.orderby {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			font-size: ptr(13);
+		}
+	}
+}
+
+// Products
+ul.products {
+	@include clearfix;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	clear: both;
+
+	&.columns-1 {
+		li.product {
+			width: 100%;
+			margin-right: 0;
+			float: none;
+		}
+	}
+
+	&.columns-2 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row.
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+
+			// Every last product in the row.
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.columns-3 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(33.33% - #{ptr(20)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(3n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(3n+3) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-4 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(25% - #{ptr(22.5)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(4n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(4n+4) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-5 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(20% - #{ptr(24)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(5n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(5n+5) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-6 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(16.66% - #{ptr(25)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(6n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(6n+6) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	li.product {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: center;
+		list-style: none;
+		margin-left: 0;
+		margin-bottom: ptr(38);
+
+		.woocommerce-loop-product {
+			&__link {
+				flex: 1 1 auto;
+				position: relative;
+				display: block;
+				text-align: left;
+				min-height: 1px;
+
+				&:hover {
+					text-decoration: none;
+
+					.woocommerce-loop-product__title {
+						text-decoration: underline;
+					}
+				}
+
+				&:active {
+					img {
+						box-shadow: 0 0 3px #4a90e2;
+
+						@include media-breakpoint-up(lg) {
+							box-shadow: none;
+						}
+					}
+				}
+			}
+
+			&__title {
+				font-size: 16px;
+				font-weight: normal;
+				margin-bottom: ptr(4);
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: ptr(9);
+				}
+			}
+		}
+
+		.star-rating {
+			font-size: ptr(14);
+			margin-top: ptr(-2);
+			height: ptr(20);
+			width: ptr(74);
+			margin-bottom: ptr(5);
+		}
+
+		.price {
+			display: flex;
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 0;
+
+			del {
+				order: 2;
+				font-weight: normal;
+			}
+
+			ins {
+				order: 1;
+				text-decoration: none;
+				margin-left: 0;
+				margin-right: ptr(10);
+
+				.amount {
+					color: $red;
+				}
+			}
+
+			.amount {
+				font-size: 16px;
+			}
+		}
+
+		img {
+			border-radius: $border-radius;
+			width: 100%;
+			margin: 0 0 ptr(12);
+
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 ptr(14);
+			}
+		}
+
+		.onsale {
+			position: absolute;
+			left: ptr(7);
+			top: ptr(8);
+		}
+	}
+}
+
+// Pagination
+.woocommerce-pagination {
+	text-align: center;
+
+	ul {
+		@include list-unstyled;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+		}
+
+		.page-numbers {
+			display: inline-block;
+			font-size: ptr(14);
+			font-weight: bold;
+			line-height: ptr(44);
+			color: #000000;
+			background-color: $gray-200;
+			border: 1px solid $gray-200;
+			border-radius: $border-radius;
+			width: ptr(46);
+			height: ptr(46);
+			margin-right: ptr(4);
+			margin-bottom: ptr(8);
+			transition: $primary-transition;
+
+			&:focus,
+			&:hover {
+				background-color: $gray-400;
+				border-color: $gray-400;
+				text-decoration: none;
+			}
+		}
+
+		.current {
+			background-color: transparent;
+			border: 1px solid $gray-300;
+
+			&:focus,
+			&:hover {
+				background-color: transparent;
+				border-color: $gray-300;
+			}
+		}
+
+		.dots {
+			background-color: transparent;
+			border-color: transparent;
+
+			&:focus,
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
+		.prev,
+		.next {
+			position: relative;
+			color: $gray-200;
+
+			&::after {
+				position: absolute;
+				font-family: 'Font Awesome 5 Free';
+				color: $gray-600;
+				left: calc(50% - #{ptr(4)});
+			}
+
+			&:focus,
+			&:hover {
+				color: $gray-400;
+			}
+		}
+
+		.prev {
+			&::after {
+				content: '\f053';
+			}
+		}
+
+		.next {
+			&::after {
+				content: '\f054';
+			}
+		}
+	}
+}
+
+.category-description {
+	font-size: ptr(14);
+
+	h1,
+	h2,
+	h3 {
+		font-size: ptr(24);
+		margin-top: ptr(12);
+	}
+}

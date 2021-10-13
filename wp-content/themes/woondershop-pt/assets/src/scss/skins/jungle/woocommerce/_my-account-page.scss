@@ -1,0 +1,91 @@
+/* WooCommerce My Account Page for Jungle skin */
+.woocommerce-MyAccount {
+	&-navigation {
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(lg) {
+			float: left;
+			width: 20.3%;
+			margin-right: ptr(60);
+			margin-bottom: 0;
+		}
+
+		ul {
+			@include list-unstyled;
+			margin-bottom: 0;
+		}
+
+		&-link {
+			a {
+				display: block;
+				font-size: ptr(14);
+				font-weight: bold;
+				color: $black;
+				background-color: $blue-100;
+				border: 1px solid #e6e6e6;
+				padding: ptr(14.5) ptr(20);
+				transition: $primary-transition;
+
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					color: $black;
+					background-color: $blue-200;
+				}
+			}
+
+			&.is-active {
+				a {
+					text-decoration: none;
+					background-color: #ffffff;
+					border-left: 2px solid $orange;
+				}
+			}
+
+			&:first-of-type {
+				> a {
+					border-top-left-radius: $border-radius;
+					border-top-right-radius: $border-radius;
+				}
+			}
+
+			&:last-of-type {
+				> a {
+					border-bottom-left-radius: $border-radius;
+					border-bottom-right-radius: $border-radius;
+				}
+			}
+
+			&:not(:last-of-type) {
+				a {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&-content {
+		@include media-breakpoint-up(lg) {
+			float: right;
+			width: calc(79.7% - #{ptr(60)});
+		}
+	}
+
+	&-orders {
+		font-size: ptr(14);
+	}
+}
+
+.woocommerce-account {
+	.woocommerce-form-login {
+		@include media-breakpoint-up(lg) {
+			margin: 0;
+		}
+	}
+}
+
+.woocommerce-ResetPassword {
+	.form-row {
+		width: 100%;
+	}
+}

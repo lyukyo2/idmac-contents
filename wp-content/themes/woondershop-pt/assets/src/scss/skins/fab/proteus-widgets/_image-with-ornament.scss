@@ -1,0 +1,38 @@
+/* Image with ornament for Fab skin */
+.image-with-ornament {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		background: url('../../images/pattern.svg');
+		top: 10%;
+		bottom: 30%;
+		width: ptr(50);
+	}
+
+	img {
+		position: relative;
+		z-index: 10;
+	}
+
+	&--left {
+		&::after {
+			right: ptr(-50);
+		}
+
+		img {
+			box-shadow: 5px 12px 50px rgba(0, 0, 0, .2), 0 6px 20px rgba(0, 0, 0, .2), -30px 30px 0 $green;
+		}
+	}
+
+	&--right {
+		&::after {
+			left: ptr(-50);
+		}
+
+		img {
+			box-shadow: 5px 12px 50px rgba(0, 0, 0, .2), 0 6px 20px rgba(0, 0, 0, .2), 30px 30px 0 $green;
+		}
+	}
+}

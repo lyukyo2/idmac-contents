@@ -1,0 +1,49 @@
+/* Mobile Search */
+.mobile-search {
+	background-color: $gray-100;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: ptr(15);
+		border-bottom: 1px solid $gray-300;
+	}
+
+	&__title {
+		flex: 1 1 0;
+		font-size: 13px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		color: $gray-600;
+		padding: 14px 0 14px 50px;
+	}
+
+	&__close {
+		line-height: 50px;
+		color: $black;
+		background-color: $gray-600;
+		border: 0;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-color: lighten($gray-600, 6);
+		}
+	}
+
+	&__form {
+		margin: 0 ptr(20);
+	}
+
+	.widget_search {
+		.search-field {
+			font-size: 16px;
+		}
+	}
+}

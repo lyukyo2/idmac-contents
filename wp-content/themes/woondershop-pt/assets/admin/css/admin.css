@@ -1,0 +1,60 @@
+/* Repeating fields in widgets */
+.pt-widget-single-opening-time-item {
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.03);
+	margin-bottom: 10px;
+}
+
+.pt-remove-opening-time-item {
+	text-decoration: none;
+}
+
+.accordion-section > .accordion-section-title::before {
+	display: inline-block;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	margin-right: 8px;
+	width: 16px;
+}
+
+#accordion-panel-woondershop_panel_general > .accordion-section-title::before {
+	content: '\f0ac';
+}
+
+#accordion-panel-woondershop_panel_header > .accordion-section-title::before {
+	content: '\f2d0';
+}
+
+#accordion-panel-woocommerce > .accordion-section-title::before {
+	content: '\f07a';
+}
+
+#accordion-panel-woondershop_panel_footer > .accordion-section-title::before {
+	content: '\f2d0';
+	transform: rotate(180deg);
+}
+
+#accordion-panel-woondershop_panel_blog > .accordion-section-title::before {
+	content: '\f303';
+}
+
+#accordion-panel-nav_menus > .accordion-section-title::before {
+	content: '\f0c9';
+}
+
+#accordion-panel-widgets > .accordion-section-title::before {
+	content: '\f1b3';
+}
+
+#accordion-section-woondershop_section_additional_javascript > .accordion-section-title::before {
+	font-family: 'Font Awesome 5 brands';
+	content: '\f3b8';
+}
+
+#accordion-section-custom_css > .accordion-section-title::before {
+	content: '\f121';
+}
+
+#accordion-section-section_other > .accordion-section-title::before {
+	content: '\f141';
+}

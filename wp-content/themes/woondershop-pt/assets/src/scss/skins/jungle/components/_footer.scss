@@ -1,0 +1,213 @@
+/* Footer for Jungle skin */
+.footer {
+	font-family: $secondary-font;
+	font-size: ptr(13);
+	color: #c7cace;
+
+	&-benefit-bar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: $primary-font;
+		font-size: ptr(11);
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+
+		&__container {
+			background-color: $blue-100;
+			border-top: 1px solid #e6e6e6;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			color: #000000;
+			padding: ptr(15) ptr(5);
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				justify-content: center;
+				flex: 1 0 0;
+				padding: ptr(28) ptr(5);
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&__icon {
+			font-size: ptr(24);
+			margin-right: ptr(20);
+
+			@include media-breakpoint-up(lg) {
+				font-size: ptr(30);
+			}
+		}
+
+		&__title {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		&__subtitle {
+			color: $gray-500;
+		}
+	}
+
+	&-top {
+		background-color: #242f3d;
+		padding: ptr(30) 0;
+
+		@include media-breakpoint-up(lg) {
+			padding: ptr(85) 0 ptr(50);
+		}
+
+		&__heading {
+			font-size: ptr(14);
+			color: #ffffff;
+			margin-bottom: ptr(15);
+
+			@include media-breakpoint-down(md) {
+				position: relative;
+				background-color: #3a4857;
+				border-radius: $border-radius;
+				padding: 18px 20px;
+				margin-bottom: 0;
+				cursor: pointer;
+			}
+
+			&::after {
+				@include media-breakpoint-down(md) {
+					position: absolute;
+					content: '\f067';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: bold;
+					right: 20px;
+					top: calc(50% - 5px);
+					color: #ffffff;
+				}
+			}
+
+			&.is-open {
+				+ div {
+					@include media-breakpoint-down(md) {
+						display: block;
+					}
+				}
+
+				&::after {
+					@include media-breakpoint-down(md) {
+						content: '\f068';
+					}
+				}
+			}
+
+			+ div {
+				@include media-breakpoint-down(md) {
+					margin-top: 15px;
+					display: none;
+				}
+			}
+		}
+
+		.widget {
+			margin-bottom: 3px;
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: ptr(30);
+			}
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&-bottom {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		color: #c7cace;
+		border-top: 1px solid rgba(255, 255, 255, .1);
+
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+
+		&__container {
+			background-color: #242f3d;
+		}
+
+		&__left {
+			padding: ptr(25) 0;
+
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+			}
+
+			+ .footer-bottom__right {
+				padding-top: 0;
+
+				@include media-breakpoint-up(lg) {
+					padding: ptr(25) 0;
+				}
+			}
+		}
+
+		&__right {
+			padding: ptr(25) 0;
+
+			@include media-breakpoint-up(lg) {
+				text-align: right;
+			}
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&-credits {
+		text-align: center;
+		color: #d8d8d8;
+		padding: ptr(20) 0;
+		opacity: .75;
+
+		&__container {
+			background-color: #141a22;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&-back-to-top {
+		display: block;
+		font-size: ptr(14);
+		text-align: center;
+		color: #ffffff;
+		background-color: #3a4757;
+		padding: ptr(15);
+		transition: $primary-transition;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: #ffffff;
+			background-color: lighten(#3a4757, 6);
+		}
+
+		i {
+			opacity: .75;
+			margin-left: ptr(5);
+		}
+	}
+}

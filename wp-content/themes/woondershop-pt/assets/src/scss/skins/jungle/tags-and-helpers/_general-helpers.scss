@@ -1,0 +1,46 @@
+/* General Helpers for Jungle skin */
+.screen-reader-text {
+	@extend .sr-only;
+}
+
+.content-area {
+	margin-bottom: ptr(100);
+
+	.page-template-template-empty & {
+		margin-bottom: 0;
+	}
+}
+
+.form-control {
+	@include form-style();
+}
+
+.site-main {
+	&--left {
+		@include media-breakpoint-up(lg) {
+			padding-left: ptr(30);
+		}
+	}
+
+	&--right {
+		@include media-breakpoint-up(lg) {
+			padding-right: ptr(30);
+		}
+	}
+
+	&--center {
+		.single & {
+			@include media-breakpoint-up(xxl) {
+				padding: 0 ptr(80);
+			}
+		}
+	}
+}
+
+.front-page-title {
+	font-size: ptr(27);
+
+	@include media-breakpoint-up(lg) {
+		font-size: ptr(32);
+	}
+}

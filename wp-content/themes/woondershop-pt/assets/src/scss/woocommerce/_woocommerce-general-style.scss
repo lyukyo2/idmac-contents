@@ -1,0 +1,432 @@
+/* Overall WooCommerce General style */
+.woocommerce {
+	.button {
+		display: inline-block;
+		font-size: ptr(13);
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		color: #ffffff;
+		background-color: theme-color('primary');
+		border: 2px solid theme-color('primary');
+		border-radius: $border-radius;
+		padding: ptr(13) ptr(30);
+		cursor: pointer;
+		transition: $primary-transition;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background-color: lighten(theme-color('primary'), 12);
+			border-color: lighten(theme-color('primary'), 12);
+			outline: none;
+		}
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.add_to_cart_button,
+	.product_type_grouped,
+	.product_type_external,
+	.product_type_simple {
+		display: block;
+		font-size: ptr(12);
+		color: $green;
+		background-color: transparent;
+		border: 1px solid $green;
+		padding: ptr(10) ptr(19);
+		margin-top: ptr(13);
+
+		&:hover,
+		&:focus {
+			color: #ffffff;
+			background-color: $green;
+			border-color: $green;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 4px rgba(87, 173, 104, .5);
+		}
+
+		&::after {
+			display: inline-block;
+			content: '';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: bold;
+			margin-left: ptr(5);
+		}
+
+		&.loading {
+			&::after {
+				content: '\f110';
+				animation: spin 2s infinite linear;
+			}
+		}
+
+		&.added {
+			&::after {
+				content: '\f00c';
+			}
+		}
+	}
+
+	.added_to_cart {
+		display: none;
+	}
+
+	.form-row {
+		display: block;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.input-text {
+		@include form-style;
+	}
+
+	.added_to_cart.disabled,
+	.added_to_cart:disabled,
+	.button.disabled,
+	.button:disabled,
+	button.disabled,
+	button:disabled,
+	input[type='button'].disabled,
+	input[type='button']:disabled,
+	input[type='reset'].disabled,
+	input[type='reset']:disabled,
+	input[type='submit'].disabled,
+	input[type='submit']:disabled {
+		opacity: .2;
+		cursor: not-allowed !important;
+	}
+
+	// Rating stars (For example on single product under add a review).
+	.stars {
+		display: inline-block;
+		font-size: ptr(18);
+		margin: 0;
+
+		a {
+			position: relative;
+			height: ptr(20);
+			width: ptr(20);
+			text-indent: ptr(-9999);
+			display: inline-block;
+			text-decoration: none;
+			margin-right: 1px;
+			font-weight: normal;
+
+			&::before {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: ptr(20);
+				height: ptr(20);
+				line-height: 1;
+				font-family: star;
+				content: '\53';
+				color: $gray-600;
+				text-indent: 0;
+				opacity: .25;
+			}
+
+			&:hover {
+				~ a::before {
+					content: '\53';
+					color: $gray-600;
+					opacity: .25;
+				}
+			}
+		}
+
+		&:hover {
+			a {
+				&::before {
+					content: '\53';
+					color: $yellow;
+					opacity: 1;
+				}
+			}
+		}
+
+		&.selected {
+			a.active {
+				&::before {
+					content: '\53';
+					color: $yellow;
+					opacity: 1;
+				}
+
+				~ a::before {
+					content: '\53';
+					color: $gray-600;
+					opacity: .25;
+				}
+			}
+
+			a:not(.active) {
+				&::before {
+					content: '\53';
+					color: $yellow;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.col2-set {
+		.col-1,
+		.col-2 {
+			@include media-breakpoint-down(md) {
+				max-width: 100%;
+				padding: 0;
+			}
+		}
+	}
+
+	// General quantity style and hidden default browser spinners.
+	.quantity {
+		.qty {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: textfield;
+			font-size: 16px;
+			text-align: center;
+			width: 100%;
+			height: ptr(50);
+			padding: ptr(10) ptr(5);
+
+			@include media-breakpoint-up(lg) {
+				width: ptr(50);
+				margin-bottom: 0;
+			}
+
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0; /* Removes leftover margin */
+			}
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		.ui-spinner {
+			display: flex;
+			border: none;
+			background: none;
+
+			&-input {
+				order: 2;
+				border-radius: 0;
+				margin: 0;
+				background-color: $white;
+			}
+
+			&-down {
+				order: 1;
+				border-radius: $border-radius;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&-up {
+				order: 3;
+				border-radius: $border-radius;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			&-button {
+				position: static;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: ptr(16);
+				color: $gray-800;
+				background: $gray-300;
+				border: 0;
+				width: ptr(100);
+				height: ptr(50);
+				padding: 0;
+				transition: $primary-transition;
+				cursor: pointer;
+
+				@include media-breakpoint-up(lg) {
+					width: ptr(50);
+				}
+
+				&:hover {
+					background-color: $gray-400;
+				}
+			}
+
+			// reset jquery-ui css
+			.ui-button-text {
+				padding: 0;
+				display: inline;
+			}
+
+			.ui-icon {
+				background: none;
+				display: inline;
+				text-indent: unset;
+				position: static;
+				margin: 0;
+			}
+		}
+	}
+
+	.stock {
+		&:empty::before {
+			display: none;
+		}
+
+		&.in-stock {
+			color: $green;
+		}
+
+		&.out-of-stock {
+			color: $red;
+		}
+	}
+}
+
+// On sale label for products. It is not nested in .woocommerce class because it is also used in non WooCommerce pages.
+.onsale {
+	display: inline-block;
+	font-size: ptr(11);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	color: #ffffff;
+	background-color: $red;
+	border-radius: $border-radius;
+	padding: ptr(3) ptr(12);
+	vertical-align: top;
+}
+
+.woocommerce-store-notice {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	font-size: ptr(16);
+	color: #ffffff;
+	background-color: $blue;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding-left: ptr(25);
+	margin: 0;
+	z-index: 10;
+
+	&__dismiss-link {
+		color: #ffffff;
+		background: rgba(0, 0, 0, .1);
+		padding: ptr(14) ptr(25);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.woocommerce-notice,
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: ptr(16);
+	color: #ffffff;
+	background-color: $green;
+	border-left: ptr(10) solid rgba(0, 0, 0, .15);
+	border-radius: $border-radius;
+	width: 100%;
+	padding: ptr(15) ptr(15) ptr(15) ptr(25);
+	margin-bottom: ptr(20);
+	margin-left: 0;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: ptr(45);
+	}
+
+	a {
+		color: #ffffff;
+
+		&:focus,
+		&:hover {
+			color: #ffffff;
+		}
+	}
+
+	.button {
+		order: 2;
+		width: 100%;
+		text-align: center;
+		margin-top: ptr(8);
+
+		@include media-breakpoint-up(sm) {
+			width: auto;
+			text-align: left;
+			margin-top: 0;
+		}
+	}
+
+	pre {
+		background-color: rgba(0, 0, 0, .1);
+	}
+
+	li {
+		flex: 1 1 100%;
+	}
+
+	.showcoupon,
+	.showlogin {
+		display: inline-block;
+		font-size: ptr(13);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #000000;
+		background-color: $gray-100;
+		border-radius: $border-radius;
+		padding: ptr(14) ptr(30);
+
+		&:focus {
+			text-decoration: none;
+			color: #000000;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: #000000;
+			background-color: darken($gray-100, 6);
+		}
+	}
+}
+
+.woocommerce-error {
+	list-style: none;
+	background-color: map-get($theme-colors, danger);
+}
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+	background-color: map-get($theme-colors, info);
+}

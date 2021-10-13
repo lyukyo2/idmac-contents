@@ -1,0 +1,27 @@
+/* Buttons */
+.btn {
+	font-size: ptr(14);
+	text-transform: uppercase;
+
+	&-sm {
+		font-size: ptr(12);
+	}
+
+	&-lg {
+		font-size: ptr(14);
+	}
+
+	/* Rounded corner */
+	&-rounded {
+		border-radius: ptr(60);
+	}
+
+	&-primary {
+		&:focus,
+		&:hover {
+			color: #ffffff;
+			background-color: lighten(theme-color('primary'), 16);
+			border-color: lighten(theme-color('primary'), 16);
+		}
+	}
+}

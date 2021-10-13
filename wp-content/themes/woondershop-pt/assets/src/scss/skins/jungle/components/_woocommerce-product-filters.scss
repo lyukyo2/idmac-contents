@@ -1,0 +1,294 @@
+/* WooCommerce Product Filters for Jungle skin */
+.wpf_items_wrapper {
+	@include media-breakpoint-up(lg) {
+		background-color: $blue-100;
+		border: 1px solid #e6e6e6;
+		border-radius: 4px;
+	}
+}
+
+.wpf_item {
+	font-size: ptr(14);
+	color: $black;
+	border-bottom: 1px solid $blue-100;
+	padding: 0;
+	padding-bottom: ptr(18);
+
+	@include media-breakpoint-up(lg) {
+		border-bottom: 1px solid #e6e6e6;
+		padding: ptr(30) ptr(30) ptr(25);
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.wpf_items_wrapper & {
+		ul {
+			li {
+				.wpf_selected {
+					color: $black;
+					font-weight: bold;
+				}
+			}
+
+			&.wpf_column_vertical,
+			&.wpf_hierachy {
+				li {
+					display: block;
+					margin: 0 0 ptr(15) 0;
+				}
+
+				&.wpf_links {
+					li {
+						padding-top: ptr(10);
+						margin-top: ptr(10);
+						margin-bottom: 0;
+						border-top: 1px solid #e6e6e6;
+					}
+
+					> li:first-of-type {
+						border-top: 0;
+					}
+
+					.wpf_submenu {
+						margin: 0;
+
+						li {
+							padding-left: ptr(15);
+						}
+					}
+				}
+
+				.wpf_submenu {
+					border-left: 0;
+					margin: ptr(15) 0 0 ptr(15);
+
+					li:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+
+	label {
+		margin-bottom: 0;
+	}
+
+	.wpf_item_name {
+		font-size: ptr(16);
+		font-weight: bold;
+		color: $black;
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin: 0 0 ptr(21);
+	}
+
+	input[type='checkbox'] {
+		position: relative;
+		border: 1px solid $gray-400;
+		border-radius: $border-radius;
+		margin-right: ptr(6);
+		transition: $primary-transition;
+
+		&:hover {
+			border-color: $gray-600;
+		}
+
+		&::before {
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			content: '';
+			background-color: $orange;
+			width: 12px;
+			height: 12px;
+			top: 3px;
+			left: 3px;
+			transition: $primary-transition;
+		}
+
+		&:checked {
+			border-color: $orange;
+
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				content: '';
+			}
+
+			~ label {
+				font-weight: bold;
+			}
+
+			~ .wpf_item_count {
+				color: $black;
+			}
+		}
+	}
+
+	input[type='radio'] {
+		margin-right: ptr(6);
+
+		&:checked {
+			~ label {
+				font-weight: bold;
+			}
+
+			~ .wpf_item_count {
+				color: $black;
+			}
+		}
+	}
+
+	.wpf_color_icons {
+		&.wpf_hide_text {
+			input {
+				&:checked {
+					+ label {
+						border: 2px solid $white;
+						box-shadow: 0 0 0 2px $orange;
+
+						i::after {
+							content: '';
+						}
+					}
+				}
+			}
+
+			label {
+				border-radius: 50px;
+				padding: 0;
+				transition: $primary-transition;
+
+				&:hover {
+					border: 2px solid $white;
+					box-shadow: 0 0 0 2px $blue-400;
+				}
+			}
+		}
+
+		label {
+			font-weight: bold;
+			border-radius: $border-radius;
+			padding: ptr(6) ptr(15);
+			margin-bottom: 0;
+		}
+
+		.wpf_item_count {
+			margin: 0;
+			background-color: transparent;
+			color: $gray-600;
+		}
+	}
+
+	.wpf_price_from,
+	.wpf_price_to {
+		font-size: 16px;
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, .1);
+		border-radius: $border-radius;
+		width: ptr(60);
+		padding-top: ptr(5);
+		padding-bottom: ptr(5);
+
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+
+	.wpf_price_to {
+		float: right;
+	}
+}
+
+.wpf_item_count {
+	font-size: ptr(14);
+	color: $gray-600;
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+	margin-top: 0;
+	margin-left: ptr(2);
+
+	&::before {
+		content: '(';
+	}
+
+	&::after {
+		content: ')';
+	}
+}
+
+.wpf_layout_vertical {
+	.wpf_item {
+		+ .wpf_item {
+			.wpf_item_name {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.wpf_price_range {
+	li {
+		margin: 0 ptr(7) ptr(10) 0;
+
+		&:hover {
+			border-color: $gray-600;
+		}
+
+		input {
+			&:checked {
+				+ label {
+					color: $white;
+					background-color: $black;
+					border: 1px solid $black;
+					box-shadow: inset 0 0 0 3px $white;
+				}
+			}
+		}
+
+		label {
+			border: 1px solid $gray-400;
+			border-radius: $border-radius;
+			padding: ptr(6) ptr(20);
+
+			&:hover {
+				color: $black;
+				border-color: $gray-600;
+			}
+		}
+	}
+}
+
+.wpf_slider {
+	&.ui-slider {
+		background-color: $blue-200;
+		height: 5px;
+		margin-left: ptr(10);
+		margin-right: ptr(10);
+
+		.ui-widget-header {
+			background-color: $orange;
+		}
+
+		.ui-slider-handle {
+			background-color: $orange;
+			border: 0;
+			top: -5px;
+		}
+	}
+}
+
+.wpf-slider-tooltip {
+	bottom: 14px;
+
+	&-inner {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}

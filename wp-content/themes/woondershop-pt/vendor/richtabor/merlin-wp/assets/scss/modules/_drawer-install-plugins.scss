@@ -1,0 +1,35 @@
+.merlin__drawer--install-plugins {
+
+	.merlin__drawer--open & {
+		padding-bottom: 1px;
+	}
+
+	li {
+		color: $gray;
+
+		span {
+			display: none;
+		}
+
+		.spinner {
+			display: inline-block;
+			position: absolute;
+			margin-top: 2px;
+			right: 10px;
+			opacity:0;
+			visibility: visible;
+			transition: opacity 200ms cubic-bezier(.694, 0, .335, 1);
+		}
+	}
+
+	&.installing li {
+
+		.spinner {
+			opacity:1;
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+}

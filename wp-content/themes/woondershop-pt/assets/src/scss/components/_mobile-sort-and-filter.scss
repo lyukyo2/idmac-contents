@@ -1,0 +1,51 @@
+/* Mobile Sort and Filter */
+.mobile-sort-and-filter {
+	display: flex;
+	border-bottom: 1px solid $gray-300;
+	margin-bottom: ptr(38);
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: ptr(60);
+	}
+
+	&__toggler {
+		flex: 1 0 50%;
+		font-size: ptr(16);
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: $gray-100;
+		border: 0;
+		padding: ptr(15) ptr(15) ptr(14);
+		cursor: pointer;
+
+		&--filter {
+			display: none;
+		}
+
+		&:focus,
+		&:hover {
+			outline: none;
+			background-color: $gray-300;
+		}
+
+		&:not(:first-of-type) {
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: '';
+				width: 2px;
+				top: ptr(10);
+				bottom: ptr(10);
+				left: 0;
+				background-color: rgba(0, 0, 0, .05);
+			}
+		}
+
+		i {
+			font-size: ptr(22);
+			margin-right: ptr(5);
+			transform: translateY(#{ptr(3)});
+		}
+	}
+}

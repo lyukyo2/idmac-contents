@@ -1,0 +1,30 @@
+/* Opening Time */
+.opening-time {
+	font-size: ptr(14);
+
+	&__item {
+		display: flex;
+
+		&:not(:last-of-type) {
+			margin-bottom: ptr(9);
+		}
+
+		&--less-important {
+			color: $gray-600;
+		}
+	}
+
+	&__separator {
+		position: relative;
+		flex: 1 1 auto;
+
+		&::after {
+			position: absolute;
+			content: '';
+			border-bottom: 1px dashed rgba(0, 0, 0, .2);
+			bottom: ptr(6);
+			left: ptr(6);
+			right: ptr(6);
+		}
+	}
+}

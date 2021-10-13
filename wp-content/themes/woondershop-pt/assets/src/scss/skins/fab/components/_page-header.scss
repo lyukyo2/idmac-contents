@@ -1,0 +1,76 @@
+/* Page Header for Fab skin */
+.page-header {
+	text-align: center;
+	margin-bottom: ptr(55);
+
+	.blog & {
+		margin-bottom: ptr(32);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(55);
+		}
+	}
+
+	&__content {
+		background-image: linear-gradient(276deg, #503a56, #7c526a);
+		padding: ptr(30);
+
+		@media (min-width: 1400px) {
+			margin-left: ptr(-125);
+			margin-right: ptr(-125);
+			padding: ptr(49) ptr(125);
+		}
+	}
+
+	&__title {
+		display: flex;
+		position: relative;
+		font-size: ptr(32);
+		font-weight: normal;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+		color: #ffffff;
+		margin-bottom: 0;
+
+		@include media-breakpoint-up(lg) {
+			font-size: ptr(46);
+		}
+
+		&::before,
+		&::after {
+			flex: 1 1 auto;
+			align-self: center;
+			content: '';
+			background-color: rgba(255, 255, 255, .1);
+			height: ptr(2);
+		}
+
+		&::before {
+			margin-right: ptr(60);
+		}
+
+		&::after {
+			margin-left: ptr(60);
+		}
+
+		+ .breadcrumbs {
+			margin-top: ptr(2);
+
+			@include media-breakpoint-up(lg) {
+				margin-top: ptr(6);
+			}
+		}
+	}
+
+	+ .mobile-sort-and-filter {
+		border-top: 1px solid $gray-300;
+		margin-top: ptr(-55);
+	}
+
+	.single-product & {
+		margin-bottom: 15px;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: ptr(120);
+		}
+	}
+}

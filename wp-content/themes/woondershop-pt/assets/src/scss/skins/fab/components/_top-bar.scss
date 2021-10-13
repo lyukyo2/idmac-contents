@@ -1,0 +1,29 @@
+/* Top Bar for Fab skin */
+.top {
+	text-align: center;
+
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		z-index: 25;
+	}
+
+	&__container {
+		font-size: ptr(16);
+		color: #888888;
+		background-color: #f3f4eb;
+		border-bottom: 1px solid #eeeeee;
+	}
+
+	.widget {
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	.textwidget {
+		padding: ptr(12) 0;
+	}
+}

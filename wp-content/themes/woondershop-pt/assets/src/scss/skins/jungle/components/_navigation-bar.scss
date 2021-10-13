@@ -1,0 +1,32 @@
+/* Navigation Bar for Jungle skin*/
+.navigation-bar {
+	position: fixed;
+	background-color: #141a22;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50px;
+	transform: translateX(-100%);
+	overflow-y: scroll;
+	transition: transform 150ms ease-out;
+	z-index: 20;
+
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		display: block;
+		background-color: transparent;
+		width: 100%;
+		transform: none;
+		overflow-y: visible;
+	}
+
+	&__container {
+		background-color: #232f3f;
+		margin-bottom: ptr(60);
+
+		+ .breadcrumbs__container,
+		+ .theme-slider-wrapper {
+			margin-top: ptr(-60);
+		}
+	}
+}

@@ -1,0 +1,527 @@
+/* WooCommerce Shop page for Jungle skin */
+
+// Product Header
+.woocommerce-result-count {
+	font-size: ptr(12);
+	color: $gray-600;
+	margin-bottom: ptr(5);
+
+	@include media-breakpoint-up(md) {
+		float: left;
+		padding: ptr(16) 0;
+		margin-bottom: ptr(18);
+	}
+}
+
+.woocommerce-ordering {
+	margin-bottom: ptr(18);
+
+	@include media-breakpoint-up(md) {
+		float: right;
+	}
+
+	.orderby {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			font-size: ptr(13);
+		}
+	}
+}
+
+.woocommerce-page-title-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	padding-bottom: ptr(22);
+	margin-bottom: ptr(30);
+
+	.woocommerce-products-header {
+		&__title {
+			display: inline-block;
+			font-size: ptr(24);
+			margin-bottom: ptr(8);
+		}
+
+		.term-description {
+			display: inline-block;
+			color: $gray-600;
+			margin-left: ptr(10);
+
+			p {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.woocommerce-result-count {
+		@media (min-width: 768px) {
+			font-size: ptr(14);
+			padding: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.woocommerce-ordering {
+		margin-bottom: 0;
+	}
+}
+
+.category-description {
+	font-size: ptr(14);
+	color: $gray-600;
+}
+
+// Products
+ul.products {
+	@include clearfix;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	clear: both;
+
+	&.columns-1 {
+		li.product {
+			width: 100%;
+			margin-right: 0;
+			float: none;
+		}
+	}
+
+	&.columns-2 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row.
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+
+			// Every last product in the row.
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.columns-3 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(33.33% - #{ptr(20)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(3n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(3n+3) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-4 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(25% - #{ptr(22.5)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(4n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(4n+4) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-5 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(20% - #{ptr(24)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(5n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(5n+5) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&.columns-6 {
+		li.product {
+			width: calc(50% - #{ptr(8)});
+			margin-right: ptr(16);
+			float: left;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - #{ptr(15)});
+				margin-right: ptr(30);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(16.66% - #{ptr(25)});
+				float: left;
+				margin-right: ptr(30);
+			}
+
+			// Every first product in the row on desktop.
+			&:nth-child(6n+1) {
+				@include media-breakpoint-up(lg) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on desktop.
+			&:nth-child(6n+6) {
+				@include media-breakpoint-up(lg) {
+					margin-right: 0;
+				}
+			}
+
+			// Every first product in the row on mobile.
+			&:nth-child(2n+1) {
+				@include media-breakpoint-down(md) {
+					clear: both;
+				}
+			}
+
+			// Every last product in the row on mobile.
+			&:nth-child(2n+2) {
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	li.product {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: center;
+		list-style: none;
+		margin-left: 0;
+		margin-bottom: ptr(38);
+
+		&:focus,
+		&:hover {
+			box-shadow: 0 0 0 7px #ffffff, 0 0 0 8px rgba(0, 0, 0, .1);
+
+			@include media-breakpoint-up(lg) {
+				box-shadow: 0 0 0 14px #ffffff, 0 0 0 15px rgba(0, 0, 0, .1);
+			}
+		}
+
+		&--with-button-on-hover {
+			margin-bottom: ptr(30);
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: ptr(8);
+			}
+
+			.button {
+				transition: opacity 100ms ease-out, visibility 100ms ease-out;
+
+				@include media-breakpoint-up(lg) {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			&:focus,
+			&:hover {
+				z-index: 1; // position: relative is already set on li.product
+
+				.button {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		.woocommerce-loop-product {
+			&__link {
+				flex: 1 1 auto;
+				position: relative;
+				display: block;
+				text-align: left;
+				min-height: 1px;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			&__title {
+				font-size: 16px;
+				font-weight: normal;
+				line-height: 1.375;
+				margin-bottom: ptr(4);
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: ptr(9);
+				}
+			}
+		}
+
+		.star-rating {
+			font-size: ptr(14);
+			margin-top: ptr(-2);
+			height: ptr(20);
+			width: ptr(74);
+			margin-bottom: ptr(5);
+		}
+
+		.price {
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 0;
+
+			del {
+				display: block;
+				font-weight: normal;
+
+				.amount {
+					font-size: 14px;
+				}
+			}
+
+			ins {
+				display: block;
+				text-decoration: none;
+				margin-left: 0;
+
+				.amount {
+					font-size: 16px;
+					color: $red;
+				}
+			}
+
+			.amount {
+				font-size: 16px;
+			}
+		}
+
+		img {
+			border-radius: $border-radius;
+			width: 100%;
+			margin: 0 0 ptr(12);
+
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 ptr(14);
+			}
+		}
+
+		.onsale {
+			position: absolute;
+			left: ptr(7);
+			top: ptr(8);
+		}
+	}
+}
+
+// Pagination
+.woocommerce-pagination {
+	text-align: center;
+
+	ul {
+		@include list-unstyled;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+		}
+
+		.page-numbers {
+			display: inline-block;
+			font-size: ptr(14);
+			font-weight: bold;
+			line-height: ptr(44);
+			color: $black;
+			background-color: #ffffff;
+			border: 1px solid $gray-300;
+			border-radius: $border-radius;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+			width: ptr(46);
+			height: ptr(46);
+			margin-right: ptr(6);
+			margin-bottom: ptr(8);
+			transition: $primary-transition;
+
+			&:focus,
+			&:hover {
+				background-color: $blue-100;
+				border-color: $blue-400;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+				text-decoration: none;
+			}
+		}
+
+		.current {
+			background-color: #fff5e9;
+			border: 1px solid $orange;
+			box-shadow: 0 0 4px rgba(255, 194, 105, .33);
+
+			&:focus,
+			&:hover {
+				background-color: #fff5e9;
+				border: 1px solid $orange;
+			}
+		}
+
+		.dots {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+
+			&:focus,
+			&:hover {
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+
+		.prev,
+		.next {
+			position: relative;
+			color: #ffffff;
+
+			&::after {
+				position: absolute;
+				font-family: 'Font Awesome 5 Free';
+				color: $black;
+				left: calc(50% - #{ptr(4)});
+			}
+
+			&:focus,
+			&:hover {
+				color: #ffffff;
+			}
+		}
+
+		.prev {
+			&::after {
+				content: '\f0d9';
+				padding-left: ptr(1);
+			}
+		}
+
+		.next {
+			&::after {
+				content: '\f0da';
+				padding-left: ptr(3);
+			}
+		}
+	}
+}

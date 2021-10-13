@@ -1,0 +1,92 @@
+/* Gutenberg Core */
+.wp-block {
+	&-quote {
+		font-style: italic;
+		border-left: 3px solid rgba(0, 0, 0, .5);
+		padding-left: $spacer;
+
+		cite {
+			font-size: 80%;
+			font-style: normal;
+
+			&::before {
+				content: '\2014\00A0';
+			}
+		}
+
+		&.is-style {
+			&-large {
+				font-family: $secondary-font;
+				font-style: normal;
+				position: relative;
+				padding: 0;
+				border: 0;
+				margin: 0 0 1.5rem $spacer;
+				font-size: 120%;
+				color: gray('800');
+
+				@include media-breakpoint-up(md) {
+					margin-left: -$grid-gutter-width;
+					margin-right: -$grid-gutter-width;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin-left: (-2.5 * $spacer);
+					margin-right: (-2.5 * $spacer);
+				}
+
+				&::before {
+					content: '\201C';
+					position: absolute;
+					opacity: .1;
+					font-size: ptr(300);
+					top: ptr(-126);
+					left: ptr(-64);
+				}
+
+				p {
+					font-style: normal;
+					font-size: unset;
+				}
+			}
+		}
+	}
+
+	&-pullquote {
+		&.is-style {
+			&-default {
+				border-top: 3px solid theme-color('primary');
+				border-bottom: 3px solid theme-color('primary');
+			}
+		}
+	}
+
+	&-image {
+		figcaption {
+			font-size: unset;
+			color: unset;
+		}
+
+		&.alignwide,
+		&.alignfull {
+			max-width: none;
+			margin-left: (-$grid-gutter-width / 2);
+			margin-right: (-$grid-gutter-width / 2);
+
+			@include media-breakpoint-up(md) {
+				margin-left: -$grid-gutter-width;
+				margin-right: -$grid-gutter-width;
+			}
+
+			@include media-breakpoint-up(lg) {
+				margin-left: (-2.5 * $spacer);
+				margin-right: (-2.5 * $spacer);
+			}
+
+			@include media-breakpoint-up(xl) {
+				margin-left: (-4 * $spacer);
+				margin-right: (-4 * $spacer);
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+/* MailChimp Subscribe */
+.mailchimp-subscribe {
+	display: flex;
+
+	&__email-input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: 0;
+		padding: ptr(5) ptr(20);
+	}
+
+	&__submit {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: ptr(13) ptr(25);
+	}
+}

@@ -1,0 +1,106 @@
+a:4:{s:8:"template";s:14:"woondershop-pt";s:4:"mods";a:22:{s:18:"custom_css_post_id";i:1494;i:0;b:0;s:18:"nav_menu_locations";a:1:{s:9:"main-menu";i:16;}s:7:"ws_skin";s:6:"jungle";s:10:"cached_css";s:17040:"
+.top__container, .top .widget_nav_menu .menu .sub-menu, .top .widget_nav_menu .menu .sub-menu a { background: #141a22; }
+.top .widget_nav_menu .menu .sub-menu .menu-item:focus>a, .top .widget_nav_menu .menu .sub-menu .menu-item:hover>a { background: #303f52; }
+
+@media (max-width: 991px) { .navigation-bar { background-color: #141a22; } }
+@media (max-width: 991px) { .main-navigation a { color: #ffffff; } }
+@media (max-width: 991px) { .main-navigation .menu-item.is-hover>a, .main-navigation .menu-item:focus>a, .main-navigation .menu-item:hover>a, .main-navigation .dropdown-toggle { background-color: #242f3d; } }
+@media (max-width: 991px) { .main-navigation .dropdown-toggle { color: #516a8a; } }
+@media (max-width: 991px) { .main-navigation .sub-menu a, .main-navigation .sub-menu { background-color: #242f3d; } }
+@media (max-width: 991px) { .main-navigation .sub-menu a { border-color: #465b77; } }
+@media (max-width: 991px) { .main-navigation .sub-menu a { color: #ffffff; } }
+@media (max-width: 991px) { .main-navigation .sub-menu .menu-item:focus>a, .main-navigation .sub-menu .menu-item:hover>a { background-color: #3a4857; } }
+@media (min-width: 992px) { .main-navigation a { color: #c7cace; } }
+@media (min-width: 992px) { .main-navigation a::after { color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation .menu-item.is-hover>a, .main-navigation .menu-item:focus>a, .main-navigation .menu-item:hover>a { color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation>.current-menu-item:focus>a, .main-navigation>.current-menu-item:hover>a, .main-navigation>.current-menu-item>a { color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation > .current-menu-item > a::before { background-color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation .sub-menu a, .main-navigation .sub-menu, .main-navigation .sub-menu .menu-item:focus > a, .main-navigation .sub-menu .menu-item:hover > a, .main-navigation .sub-menu .menu-item[aria-expanded="true"] > a { background-color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation .sub-menu .menu-item > a:hover { background-color: #efefef; } }
+@media (min-width: 992px) { .main-navigation .sub-menu a { border-color: #efefef; } }
+@media (min-width: 992px) { .main-navigation .featured-dropdown > .sub-menu::before { border-bottom-color: #ffffff; } }
+@media (min-width: 992px) { .main-navigation .sub-menu > .menu-item-has-children > a::after { color: #d1d1d1; } }
+@media (min-width: 992px) { .main-navigation .sub-menu a, .main-navigation .sub-menu .menu-item > a { color: #666666; } }
+@media (min-width: 992px) { .main-navigation .sub-menu .menu-item-icon { color: #939393; } }
+@media (min-width: 992px) { .main-navigation .sub-menu .menu-item:focus > a, .main-navigation .sub-menu .menu-item:hover > a, .main-navigation .sub-menu .menu-item[aria-expanded=true] > a, .main-navigation .sub-menu .menu-item:focus > a .menu-item-icon, .main-navigation .sub-menu .menu-item:hover > a .menu-item-icon, .main-navigation .sub-menu .menu-item[aria-expanded="true"] > a .menu-item-icon { color: #000000; } }
+.header__container, .navigation-bar__container, .navigation-bar__container, .benefit-bar__container, .header-mobile__container, body.woondershop-has-mobile-sticky-header .header-mobile__container { background-color: #232f3f; }
+.page-header__title { color: #000000; }
+.breadcrumbs a, .breadcrumbs span > span { color: #999999; }
+.content-area, .accordion__content .panel-body, .woocommerce-tabs .woocommerce-Tabs-panel { color: #666666; }
+h1, h2, h3, h4, h5, h6, .post-navigation__title, .accordion__panel .panel-title a.collapsed, .accordion__panel .panel-title a, .accordion .more-link, .latest-news--more-news, .wpf_item_name, .woonder-product__title, .woocommerce-tabs .woocommerce-Reviews .woocommerce-Reviews-title, .woocommerce-tabs .woocommerce-Reviews .comment-reply-title { color: #000000; }
+.header__logo-text, .widget_product_search .search-field, .header__widgets .shopping-cart__link, a.icon-box:focus .icon-box__icon, a.icon-box:hover .icon-box__icon, .benefit-bar a.icon-box:focus .icon-box__icon, .benefit-bar a.icon-box:hover .icon-box__icon, .widget_search .search-submit { color: #f39f39; }
+.shopping-cart .woondershop-cart-quantity, .header-mobile__cart-toggler .woondershop-cart-quantity { color: #f7c281; }
+.main-navigation a::before, .wpf_slider.ui-slider .ui-slider-handle, .wpf_slider.ui-slider .ui-widget-header, .widget_calendar caption, .pw-instagram__item--cta, .wpf_item input[type=checkbox]::before, .widget_tag_cloud a:focus, .widget_tag_cloud a:hover, .main-navigation__label { background-color: #f39f39; }
+.widget_search .search-submit, .header__widgets .widget_product_search .search-field + button, .header__widgets .ysm_search_widget .search-field + button { background-color: #f7c281; }
+.pagination .current, .pagination .current:hover, .pagination .current:focus, .woocommerce-pagination ul .current, .woocommerce-pagination ul .current:focus, .woocommerce-pagination ul .current:hover, .woocommerce .quantity .ui-spinner-button:hover { background-color: #fad7ac; }
+.pw-instagram__item--cta:hover, .widget_tag_cloud a:active:hover, .widget_search .search-submit:focus, .widget_search .search-submit:hover, .header__widgets .widget_product_search .search-field + button:focus, .header__widgets .widget_product_search .search-field + button:hover, .header__widgets .ysm_search_widget .search-field + button:focus, .header__widgets .ysm_search_widget .search-field + button:hover { background-color: #f1911c; }
+select:focus, .wpf_item input[type=checkbox]:checked, .woocommerce-pagination ul .current, .woocommerce-pagination ul .current:focus, .woocommerce-pagination ul .current:hover, .product .cart .variations .variation-img--selected, .product .cart .variations .variation-img:hover, .product .woocommerce-product-gallery .flex-control-thumbs .flex-active, .product .woocommerce-product-gallery .flex-control-thumbs .flex-active:hover, .widget_tag_cloud a, .widget_tag_cloud a:focus, .widget_tag_cloud a:hover, .pagination .current, .pagination .current:hover, .woocommerce .quantity .ui-spinner-button:hover { border-color: #f39f39; }
+.content-area .widget_nav_menu .current-menu-item a, .woocommerce-MyAccount-navigation-link.is-active a { border-left-color: #f39f39; }
+@media (max-width: 991px) { .woocommerce-tabs .tabs .active a, .woocommerce-tabs .tabs .active a:hover { border-left-color: #f39f39; } }
+.product .cart .variations .variation-img--selected::after, .product .woocommerce-product-gallery .flex-control-thumbs .flex-active-container::before { border-top-color: #f39f39; }
+@media (min-width: 992px) { .woocommerce-tabs .tabs .active a, .woocommerce-tabs .tabs .active a:hover { border-top-color: #f39f39; } }
+.widget_tag_cloud a:active:hover { border-color: #f1911c; }
+.wpf_item .wpf_color_icons.wpf_hide_text input:checked + label { box-shadow: 0 0 0 2px #f39f39; }
+a, .latest-news__more-news, .article-grid .article__more-link, .article-grid .article__container:focus .article__more-link, .article-grid .article__container:hover .article__more-link { color: #3a7bb8; }
+a:hover, .latest-news__more-news:hover, .article-grid .article__more-link:hover, .article-grid .article__container:focus .article__more-link:hover, .article-grid .article__container:hover .article__more-link:hover { color: #e48c34; }
+.btn-primary, .woocommerce .button, .woonder-product__button, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout, .image-banner__cta, .woocommerce-tabs .woocommerce-Reviews .submit, .smart-search-view-all-holder > a { background: #ffc768 linear-gradient(to bottom, #ffc768, #ffa50c); }
+.btn-primary:focus, .btn-primary:hover, .btn-primary:active:hover, .woocommerce .button:focus, .woocommerce .button:hover, .woocommerce .button:active:hover, .woonder-product__button:focus, .woonder-product__button:hover, .woonder-product__button:active:hover, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:focus, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:hover, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:active:hover, .image-banner__cta:focus, .image-banner__cta:hover, .image-banner__cta:active:hover, .woocommerce-tabs .woocommerce-Reviews .submit:focus, .woocommerce-tabs .woocommerce-Reviews .submit:hover, .woocommerce-tabs .woocommerce-Reviews .submit:active:hover, .smart-search-view-all-holder > a:focus, .smart-search-view-all-holder > a:hover, .smart-search-view-all-holder > a:active:hover { background: #ffb83f linear-gradient(to bottom, #ffb83f, #d88800); }
+.btn-primary, .woocommerce .button, .woonder-product__button, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout, .image-banner__cta, .woocommerce-tabs .woocommerce-Reviews .submit, .smart-search-view-all-holder > a, .product .cart .single_add_to_cart_button { border-color: #ffa50c; }
+.btn-primary:focus, .btn-primary:hover, .btn-primary:active:hover, .woocommerce .button:focus, .woocommerce .button:hover, .woocommerce .button:active:hover, .woonder-product__button:focus, .woonder-product__button:hover, .woonder-product__button:active:hover, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:focus, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:hover, .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout:active:hover, .image-banner__cta:focus, .image-banner__cta:hover, .image-banner__cta:active:hover, .woocommerce-tabs .woocommerce-Reviews .submit:focus, .woocommerce-tabs .woocommerce-Reviews .submit:hover, .woocommerce-tabs .woocommerce-Reviews .submit:active:hover, .smart-search-view-all-holder > a:focus, .smart-search-view-all-holder > a:hover, .smart-search-view-all-holder > a:active:hover { border-color: #d88800; }
+
+.btn-light, .btn-light:focus, .btn-light:hover, .btn-light:active:hover { color: #333333; }
+.btn-light { background-color: #ffffff; }
+.btn-light:focus, .btn-light:hover { background-color: #efefef; }
+.btn-light:active:hover { background-color: #e0e0e0; }
+.btn-light { border-color: #ffffff; }
+.btn-light:focus, .btn-light:hover { border-color: #efefef; }
+.btn-light:active:hover { border-color: #e0e0e0; }
+.btn-dark { background-color: #485769; }
+.btn-dark:focus, .btn-dark:hover { background-color: #3c4857; }
+.btn-dark:active:hover { background-color: #2f3945; }
+.btn-dark { border-color: #485769; }
+.btn-dark:focus, .btn-dark:hover { border-color: #3c4857; }
+.btn-dark:active:hover { border-color: #2f3945; }
+.ws-yen .path1:before, .ws-tag .path1:before, .ws-return .path2:before, .ws-coins-1 .path1:before, .ws-sign .path1:before, .ws-heart .path1:before, .ws-wallet .path1:before, .ws-shopping-bag-2 .path1:before, .ws-delivery-truck-1 .path1:before, .ws-delivery-truck .path1:before, .ws-ticket .path1:before, .ws-task .path1:before, .ws-chat .path1:before, .ws-chat .path2:before, .ws-shopping-basket .path1:before, .ws-shopping-bag-1 .path1:before, .ws-loupe .path1:before, .ws-percentage .path2:before, .ws-review .path1:before, .ws-receipt .path1:before, .ws-smartphone-1 .path2:before, .ws-smartphone .path2:before, .ws-atm .path1:before, .ws-email .path3:before, .ws-pin .path2:before, .ws-list .path2:before, .ws-hanger-1 .path1:before, .ws-hanger .path1:before, .ws-gift .path1:before, .ws-gift-bag .path1:before, .ws-package-2 .path1:before, .ws-dollar .path1:before, .ws-euro .path1:before, .ws-coins .path1:before, .ws-cursor .path2:before, .ws-online-banking .path1:before, .ws-cash-1 .path1:before, .ws-cash .path1:before, .ws-trolley .path1:before, .ws-shopping-cart-2 .path1:before, .ws-shopping-cart-1 .path1:before, .ws-shopping-cart .path1:before, .ws-credit-card-1 .path1:before, .ws-credit-card .path1:before, .ws-calculator .path1:before, .ws-package-1 .path1:before, .ws-package .path1:before, .ws-medal .path1:before, .ws-barcode .path1:before, .ws-barcode .path2:before, .ws-barcode .path3:before, .ws-barcode .path4:before, .ws-barcode .path5:before, .ws-barcode .path6:before, .ws-shopping-bag .path1:before, .ws-worldwide .path1:before { color: #f39f39; }
+.ws-yen .path2::before, .ws-tag .path2::before, .ws-tag .path3::before, .ws-return .path1::before, .ws-coins-1 .path2::before, .ws-coins-1 .path3::before, .ws-coins-1 .path4::before, .ws-coins-1 .path5::before, .ws-sign .path2::before, .ws-sign .path3::before, .ws-heart .path2::before, .ws-heart .path3::before, .ws-heart .path4::before, .ws-wallet .path2::before, .ws-wallet .path3::before, .ws-shopping-bag-2 .path2::before, .ws-shopping-bag-2 .path3::before, .ws-shopping-bag-2 .path4::before, .ws-delivery-truck-1 .path2::before, .ws-delivery-truck-1 .path3::before, .ws-delivery-truck-1 .path4::before, .ws-delivery-truck .path2::before, .ws-ticket .path2::before, .ws-ticket .path3::before, .ws-task .path2::before, .ws-task .path3::before, .ws-task .path4::before, .ws-task .path5::before, .ws-task .path6::before, .ws-task .path7::before, .ws-task .path8::before, .ws-task .path9::before, .ws-task .path10::before, .ws-chat .path3::before, .ws-chat .path4::before, .ws-shopping-basket .path2::before, .ws-shopping-basket .path3::before, .ws-shopping-basket .path4::before, .ws-shopping-basket .path5::before, .ws-shopping-bag-1 .path2::before, .ws-shopping-bag-1 .path3::before, .ws-loupe .path2::before, .ws-loupe .path3::before, .ws-percentage .path1::before, .ws-percentage .path3::before, .ws-percentage .path4::before, .ws-percentage .path5::before, .ws-review .path2::before, .ws-review .path3::before, .ws-review .path4::before, .ws-receipt .path2::before, .ws-receipt .path3::before, .ws-receipt .path4::before, .ws-receipt .path5::before, .ws-receipt .path6::before, .ws-smartphone-1 .path1::before, .ws-smartphone-1 .path3::before, .ws-smartphone .path1::before, .ws-smartphone .path3::before, .ws-smartphone .path4::before, .ws-smartphone .path5::before, .ws-atm .path2::before, .ws-atm .path3::before, .ws-email .path1::before, .ws-email .path2::before, .ws-email .path4::before, .ws-email .path5::before, .ws-pin .path1::before, .ws-pin .path3::before, .ws-list .path1::before, .ws-list .path3::before, .ws-list .path4::before, .ws-list .path5::before, .ws-list .path6::before, .ws-hanger-1 .path2::before, .ws-hanger-1 .path3::before, .ws-hanger .path2::before, .ws-gift .path2::before, .ws-gift-bag .path2::before, .ws-package-2 .path2::before, .ws-package-2 .path3::before, .ws-package-2 .path4::before, .ws-package-2 .path5::before, .ws-dollar .path2::before, .ws-euro .path2::before, .ws-coins .path2::before, .ws-coins .path3::before, .ws-cursor .path1::before, .ws-cursor .path3::before, .ws-cursor .path4::before, .ws-cursor .path5::before, .ws-online-banking .path2::before, .ws-online-banking .path3::before, .ws-cash-1 .path2::before, .ws-cash-1 .path3::before, .ws-cash-1 .path4::before, .ws-cash .path2::before, .ws-cash .path3::before, .ws-cash .path4::before, .ws-trolley .path2::before, .ws-trolley .path3::before, .ws-shopping-cart-2 .path2::before, .ws-shopping-cart-2 .path3::before, .ws-shopping-cart-2 .path4::before, .ws-shopping-cart-2 .path5::before, .ws-shopping-cart-1 .path2::before, .ws-shopping-cart .path2::before, .ws-credit-card-1 .path2::before, .ws-credit-card-1 .path3::before, .ws-credit-card-1 .path4::before, .ws-credit-card-1 .path5::before, .ws-credit-card .path2::before, .ws-credit-card .path3::before, .ws-calculator .path2::before, .ws-calculator .path3::before, .ws-calculator .path4::before, .ws-calculator .path5::before, .ws-calculator .path6::before, .ws-calculator .path7::before, .ws-calculator .path8::before, .ws-calculator .path9::before, .ws-calculator .path10::before, .ws-calculator .path11::before, .ws-calculator .path12::before, .ws-calculator .path13::before, .ws-package-1 .path2::before, .ws-package .path2::before, .ws-medal .path2::before, .ws-medal .path3::before, .ws-barcode .path7::before, .ws-barcode .path8::before, .ws-barcode .path9::before, .ws-barcode .path10::before, .ws-barcode .path11::before, .ws-barcode .path12::before, .ws-shopping-bag .path2::before, .ws-shopping-bag .path3::before, .ws-shopping-bag .path4::before, .ws-worldwide .path2::before { color: #000000; }
+.pt-slick-carousel__content-title { color: #000000; }
+.pt-slick-carousel__content-description { color: #999999; }
+
+body .boxed-container { background-repeat: repeat; }
+body .boxed-container { background-position-x: center; }
+body .boxed-container { background-position-y: center; }
+body .boxed-container { background-attachment: scroll; }
+body .boxed-container { background-color: #ffffff; }
+.footer-top, .footer-bottom__container { background-color: #242f3d; }
+.footer-top__heading { color: #ffffff; }
+.footer-top, .footer-bottom { color: #c7cace; }
+.footer-top a, .footer-top .widget_nav_menu .menu a, .footer-bottom a, .footer .footer-bottom .back-to-top { color: #c7cace; }
+
+
+
+.footer-credits__container { background-color: #141a22; }
+.footer-credits { color: #d8d8d8; }
+.footer-back-to-top { background-color: #3a4757; }
+.footer-back-to-top:focus, .footer-back-to-top:hover { background-color: #465669; }";s:21:"logo_dimensions_array";a:2:{s:5:"width";i:148;s:6:"height";i:35;}s:27:"footer_benefit_bar_settings";a:4:{i:0;a:4:{s:4:"icon";s:20:"ws ws-delivery-truck";s:5:"title";s:13:"Free Delivery";s:4:"text";s:22:"On all orders over $30";s:3:"url";s:0:"";}i:1;a:4:{s:4:"icon";s:12:"ws ws-return";s:5:"title";s:12:"Free Returns";s:4:"text";s:32:"No questions asked return policy";s:3:"url";s:0:"";}i:2;a:4:{s:4:"icon";s:10:"ws ws-chat";s:5:"title";s:24:"Need Help? +555 123 4567";s:4:"text";s:35:"Call us on a toll-free phone number";s:3:"url";s:0:"";}i:3;a:4:{s:4:"icon";s:11:"ws ws-medal";s:5:"title";s:20:"Money Back Guarantee";s:4:"text";s:18:"No questions asked";s:3:"url";s:0:"";}}s:8:"logo_img";s:101:"https://demo.proteusthemes.com/woondershop-jungle/wp-content/uploads/sites/68/2018/06/logo_normal.png";s:10:"logo2x_img";s:96:"https://demo.proteusthemes.com/woondershop-jungle/wp-content/uploads/sites/68/2018/06/logo2x.png";s:23:"text_color_content_area";s:7:"#666666";s:21:"footer_widgets_layout";s:12:"[2,4,6,8,10]";s:22:"footer_bottom_left_txt";s:119:"<img src="https://demo.proteusthemes.com/woondershop-jungle/wp-content/uploads/sites/68/2018/06/logo_normal.png"></img>";s:23:"footer_bottom_right_txt";s:173:"In our store, we accept <img style="margin-left: 20px" src="https://demo.proteusthemes.com/woondershop-jungle/wp-content/uploads/sites/68/2018/06/payment-methods.png"></img>";s:21:"sticky_desktop_header";b:1;s:20:"sticky_mobile_header";b:1;s:23:"top_left_bar_visibility";s:2:"no";s:24:"top_right_bar_visibility";s:2:"no";s:31:"primary_button_background_color";s:7:"#ffc768";s:34:"auto_open_featured_dropdown_mobile";b:1;s:14:"headings_color";s:7:"#000000";s:11:"layout_mode";s:4:"wide";s:23:"change_add_to_cart_text";b:1;}s:7:"options";a:20:{s:22:"woocommerce_demo_store";s:2:"no";s:29:"woocommerce_demo_store_notice";s:79:"This is a demo store for testing purposes &mdash; no orders shall be fulfilled.";s:29:"woocommerce_shop_page_display";s:0:"";s:36:"woocommerce_category_archive_display";s:0:"";s:35:"woocommerce_default_catalog_orderby";s:10:"menu_order";s:30:"woocommerce_single_image_width";s:3:"800";s:33:"woocommerce_thumbnail_image_width";s:3:"300";s:30:"woocommerce_thumbnail_cropping";s:3:"1:1";s:43:"woocommerce_thumbnail_cropping_custom_width";s:1:"4";s:44:"woocommerce_thumbnail_cropping_custom_height";s:1:"3";s:34:"woocommerce_checkout_company_field";s:8:"optional";s:36:"woocommerce_checkout_address_2_field";s:8:"optional";s:32:"woocommerce_checkout_phone_field";s:8:"required";s:46:"woocommerce_checkout_highlight_required_fields";s:3:"yes";s:55:"woocommerce_checkout_terms_and_conditions_checkbox_text";s:44:"I have read and agree to the website [terms]";s:40:"woocommerce_checkout_privacy_policy_text";s:161:"Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our [privacy_policy].";s:26:"wp_page_for_privacy_policy";s:0:"";s:25:"woocommerce_terms_page_id";s:0:"";s:9:"site_icon";s:4:"1507";s:23:"nav_menus_created_posts";a:0:{}}s:6:"wp_css";s:444:".main-navigation .sub-menu .woonder-product__button {display: none}
+
+@media (max-width: 991.99px) {
+	#pg-15-8 .panel-grid-cell {
+		width: 48%;
+	}	
+}
+
+@media (max-width: 479.99px) {
+	#pg-15-2 .image-banner__content--halfwidth.image-banner__content--top-left {
+		padding: 0.8rem 1rem;
+	}
+	
+	#pg-15-2 .image-banner__text {
+		margin-bottom: .5rem;
+	}
+	
+	#pg-15-2 .image-banner__content {
+		transform: scale(0.9);
+		transform-origin: left top;
+	}
+}
+";}

@@ -1,0 +1,81 @@
+/* Pagination for Jungle skin */
+.pagination {
+	font-size: ptr(14);
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-top: ptr(25);
+
+	.page-numbers {
+		display: inline-block;
+		line-height: ptr(45);
+		color: $black;
+		background-color: #ffffff;
+		border: 1px solid $gray-300;
+		border-radius: $border-radius;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+		width: ptr(47);
+		height: ptr(47);
+		margin: 0 ptr(3);
+		transition: $primary-transition;
+
+		&:focus,
+		&:hover {
+			text-shadow: none;
+			text-decoration: none;
+			background-color: $blue-100;
+			border-color: $blue-400;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+		}
+	}
+
+	.current {
+		text-shadow: none;
+		background-color: #fff5e9;
+		border: 1px solid $orange;
+		box-shadow: 0 0 4px rgba(255, 194, 105, .33);
+
+		&:hover {
+			background-color: #fff5e9;
+			border: 1px solid $orange;
+		}
+	}
+
+	.prev,
+	.next {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			width: ptr(47);
+		}
+	}
+
+	.prev {
+		margin-bottom: ptr(10);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+	}
+
+	.next {
+		margin-top: ptr(20);
+
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+		}
+	}
+
+	.dots {
+		background-color: transparent;
+		box-shadow: none;
+		margin: 0;
+		border: 0;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			box-shadow: none;
+		}
+	}
+}

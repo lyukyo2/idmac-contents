@@ -1,0 +1,327 @@
+/* WooCommerce Checkout Page for Jungle skin */
+.woocommerce-checkout {
+	// Checkout review order table
+	.woocommerce-checkout-review-order-table {
+		@include review-order-table;
+
+		#shipping_method {
+			@include list-unstyled;
+			margin-bottom: 0;
+
+			input {
+				margin-right: ptr(10);
+			}
+		}
+
+		.product-name {
+			width: 70%;
+		}
+
+		.product-total {
+			width: 30%;
+		}
+
+		.cart_item {
+			.product-name {
+				dl {
+					&.variation {
+						display: flex;
+						margin-bottom: 0;
+
+						dt {
+							margin-right: 2px;
+						}
+
+						dd {
+							position: relative;
+							margin-right: 10px;
+
+							&::after {
+								position: absolute;
+								content: ',';
+								right: -3px;
+								top: 0;
+							}
+
+							&:last-of-type {
+								&::after {
+									display: none;
+								}
+							}
+						}
+
+						dd,
+						p {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Payment methods
+	.wc_payment_methods {
+		@include list-unstyled;
+		margin-bottom: ptr(30);
+	}
+
+	.wc_payment_method {
+		background-color: $blue-100;
+		border-radius: $border-radius;
+
+		&:not(:last-of-type) {
+			margin-bottom: ptr(4);
+		}
+
+		> input {
+			display: none;
+		}
+
+		> input:checked + label {
+			&::before {
+				content: '\f192';
+				color: $green;
+			}
+		}
+
+		> label {
+			@include clearfix;
+			position: relative;
+			display: block;
+			font-size: ptr(16);
+			font-weight: bold;
+			color: $gray-800;
+			padding: ptr(25) ptr(30);
+			margin-bottom: 0;
+			cursor: pointer;
+			transition: $primary-transition;
+
+			&:hover {
+				background-color: $blue-300;
+			}
+
+			&::before {
+				content: '\f111';
+				font-family: 'Font Awesome 5 Free';
+				font-weight: normal;
+				color: $gray-600;
+				margin-right: ptr(10);
+				transition: $primary-transition;
+			}
+
+			a {
+				font-weight: normal;
+			}
+		}
+
+		.payment_box {
+			font-size: ptr(16);
+			color: $gray-800;
+			padding: ptr(5) ptr(30) ptr(25);
+
+			p {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		img {
+			float: right;
+			max-height: ptr(60);
+		}
+	}
+
+	.place-order {
+		.button {
+			font-size: ptr(18);
+			width: 100%;
+			white-space: pre-wrap;
+			padding: ptr(25) ptr(30);
+			margin-bottom: ptr(30);
+
+			&:focus,
+			&:hover {
+				outline: none;
+			}
+		}
+	}
+
+	#ship-to-different-address {
+		.woocommerce-form {
+			&__label {
+				width: 100%;
+				margin-bottom: 0;
+
+				br {
+					display: none;
+				}
+			}
+
+			&__input-checkbox {
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+
+				&:checked {
+					+ span {
+						background-color: #ffffff;
+						border-color: $green;
+
+						&::before {
+							background-color: $green;
+						}
+					}
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: block;
+			font-size: ptr(16);
+			background-color: $blue-100;
+			border: 1px solid $blue-100;
+			border-radius: $border-radius;
+			padding: ptr(21) ptr(30) ptr(21) ptr(60);
+			transition: $primary-transition;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $blue-300;
+
+				&::before {
+					border-color: $green;
+					box-shadow: inset 0 0 0 2px $blue-300;
+				}
+			}
+
+			&::before {
+				position: absolute;
+				content: '';
+				background-color: transparent;
+				border: 1px solid $gray-600;
+				border-radius: $border-radius;
+				box-shadow: inset 0 0 0 2px $gray-100;
+				width: ptr(20);
+				height: ptr(20);
+				left: ptr(25);
+				top: calc(50% - #{ptr(10)});
+				transition: $primary-transition;
+			}
+		}
+	}
+
+	// Special select dropdown for countries on the checkout page.
+	.select2-container {
+		&--default {
+			.select2-selection--single {
+				background-color: transparent;
+				background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiIGZpbGw9IiM5OTk5OTkiLz48L3N2Zz4=');
+				background-position: calc(100% - #{ptr(20)}) 50%;
+				background-repeat: no-repeat;
+				background-size: auto 20%;
+				border: 1px solid $gray-300;
+				border-radius: $border-radius;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+				height: ptr(50);
+
+				&:hover {
+					border-color: $gray-600;
+				}
+
+				&:focus {
+					border-color: $black;
+					outline: none;
+				}
+
+				.select2-selection__rendered {
+					font-size: ptr(14);
+					padding: ptr(11) ptr(35) ptr(11) ptr(20);
+				}
+
+				.select2-selection__arrow {
+					display: none;
+				}
+			}
+		}
+
+		&--open {
+			.select2-selection--single {
+				border-color: #aaaaaa;
+			}
+		}
+	}
+
+	// WooCommerce checkout page with distraction free empty page template
+	&.page-template-template-empty {
+		background-color: $blue-100;
+
+		.boxed-container {
+			background-color: $blue-100;
+		}
+
+		#customer_details {
+			background-color: #ffffff;
+			box-shadow: 0 2px 25px rgba(153, 153, 153, .5);
+			padding: ptr(30) ptr(18);
+			margin-bottom: ptr(30);
+			margin-left: -15px;
+			margin-right: -15px;
+
+			@include media-breakpoint-up(sm) {
+				margin-left: 0;
+				margin-right: 0;
+				padding: ptr(45) ptr(50);
+			}
+		}
+
+		.wc_payment_method {
+			background-color: $blue-200;
+
+			> input:checked + label,
+			> input:checked ~ .payment_box {
+				background-color: #ffffff;
+			}
+
+			> input:checked + label {
+				border: 1px solid $green;
+				border-bottom: 0;
+			}
+
+			> input:checked ~ .payment_box {
+				border: 1px solid $green;
+				border-top: 0;
+			}
+
+			> label {
+				border: 1px solid $blue-300;
+
+				&:hover {
+					background-color: $blue-300;
+				}
+			}
+		}
+
+		.woocommerce-error,
+		.woocommerce-info,
+		.woocommerce-message,
+		.woocommerce-notice {
+			margin-bottom: 0;
+			margin-left: -15px;
+			margin-right: -15px;
+			width: calc(100% + 30px);
+
+			@include media-breakpoint-up(sm) {
+				margin-left: 0;
+				margin-right: 0;
+				width: 100%;
+			}
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: ptr(45);
+			}
+		}
+	}
+}

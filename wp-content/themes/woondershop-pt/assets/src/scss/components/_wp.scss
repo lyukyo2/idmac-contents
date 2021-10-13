@@ -1,0 +1,259 @@
+/* WordPress Specific */
+// Alignments
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	img,
+	video,
+	figure {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.alignnone {
+	margin: 0 0 ptr(39);
+}
+
+.aligncenter {
+	margin: 0 auto ptr(39);
+}
+
+.alignleft {
+	float: left;
+	margin: ptr(8) ptr(25) ptr(39) 0;
+}
+
+.alignright {
+	float: right;
+	margin: ptr(8) 0 ptr(39) ptr(25);
+}
+
+// Captions
+.wp-caption {
+	&.alignnone {
+		margin: 0 0 ptr(32);
+	}
+
+	&.aligncenter {
+		margin: 0 auto ptr(32);
+	}
+
+	&.alignleft {
+		margin: ptr(8) ptr(25) ptr(22) 0;
+	}
+
+	&.alignright {
+		margin: ptr(8) 0 ptr(22) ptr(25);
+	}
+
+	img {
+		margin: 0;
+	}
+
+	.wp-caption-text {
+		font-size: ptr(15);
+		text-align: center;
+		font-weight: bold;
+		font-style: italic;
+		color: #a9aeb6;
+		margin: ptr(12) ptr(5) 0;
+	}
+}
+
+// Gallery
+.gallery {
+	&-item {
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+		margin: 0 0 ptr(30);
+		padding: 0 ptr(20) 0 0;
+		width: 50%;
+
+		@include media-breakpoint-up(md) {
+			max-width: 25%;
+		}
+
+		a {
+			img {
+				display: block;
+				backface-visibility: hidden;
+				transition: filter .2s ease-in;
+			}
+
+			&:focus,
+			&:hover {
+				img {
+					filter: opacity(60%);
+				}
+			}
+		}
+
+		a,
+		a:focus,
+		a:hover {
+			display: inline-block;
+			background-color: none;
+			box-shadow: none;
+			max-width: 100%;
+		}
+	}
+
+	&-caption {
+		display: block;
+		text-align: left;
+		padding: 0 ptr(10) 0 0;
+		margin-bottom: 0;
+		max-width: 100%;
+	}
+
+	&-columns-1 {
+		.gallery-item {
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-columns-2 {
+		.gallery-item {
+			max-width: 50%;
+
+			@include media-breakpoint-up(md) {
+				max-width: 50%;
+			}
+		}
+	}
+
+	&-columns-3 {
+		.gallery-item {
+			@include media-breakpoint-up(md) {
+				max-width: 33.33%;
+			}
+		}
+	}
+
+	&-columns-4 {
+		.gallery-item {
+			@include media-breakpoint-up(md) {
+				max-width: 25%;
+			}
+		}
+	}
+
+	&-columns-5 {
+		.gallery-item {
+			@include media-breakpoint-up(lg) {
+				max-width: 20%;
+			}
+		}
+	}
+
+	&-columns-6 {
+		.gallery-item {
+			@include media-breakpoint-up(lg) {
+				max-width: 16.66%;
+			}
+		}
+	}
+}
+
+// Tables
+table,
+th,
+td {
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+table {
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 ptr(30);
+	width: 100%; /* Prevents HTML tables from becoming too wide */
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	border-width: 0 1px 1px 0;
+	font-weight: bold;
+}
+
+td {
+	border-width: 0 1px 1px 0;
+}
+
+th,
+td {
+	padding: ptr(10);
+}
+
+// Post password form.
+.post-password-form {
+	label {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+
+		input {
+			text-shadow: none;
+			font-weight: normal;
+			background-color: theme-color('light');
+			color: #666666;
+			border: 0;
+			border-radius: $border-radius;
+			margin-top: ptr(2);
+			transition: $primary-transition;
+
+			&:focus {
+				background-color: theme-color('light');
+				color: #666666;
+				outline: none;
+			}
+		}
+	}
+
+	input {
+		background-color: theme-color('primary');
+		border: 1px solid theme-color('primary');
+		height: ptr(45);
+		color: #ffffff;
+		font-size: ptr(15);
+		font-weight: bold;
+		border-radius: $border-radius;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+		padding: 0 ptr(10);
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+}
+
+// Needed classes for the theme check.
+.bypostauthor {
+	position: static;
+}
+
+.multi-page {
+	margin-top: ptr(30);
+
+	.btn {
+		padding: ptr(3.5) ptr(10);
+		margin-right: ptr(2);
+	}
+}

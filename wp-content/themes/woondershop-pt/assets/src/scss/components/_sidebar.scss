@@ -1,0 +1,31 @@
+/* Sidebar */
+.sidebar {
+	font-size: ptr(14);
+	margin-top: ptr(50);
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 0;
+	}
+
+	&--shop {
+		@include media-breakpoint-up(lg) {
+			margin-top: ptr(15);
+		}
+	}
+
+	&__headings {
+		font-size: ptr(16);
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		margin-bottom: ptr(21);
+	}
+
+	.widget {
+		margin-bottom: ptr(60);
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
