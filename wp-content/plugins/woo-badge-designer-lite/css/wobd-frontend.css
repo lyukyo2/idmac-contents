@@ -1,0 +1,398 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Oct 10, 2018, 3:04:13 PM
+    Author     : User
+*/
+/*Default  styles*/
+.wobd-text{
+    display: block;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    line-height: 1;
+    text-align: center;
+}
+.wobd-icon{
+    text-align: center;
+}
+.wobd-icon.wobd-text i{
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wobd-badges-wrapper{
+    display: block;
+    position: relative;
+    white-space: normal;
+}
+.wobd-time{
+    white-space: normal;
+    font-family: 'Lato', sans-serif !important;
+}
+.wobd-badges{
+    z-index: 9;
+    white-space: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*Position*/
+.wobd-badges.wobd-position-right_center{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateZ(0);
+    -moz-transform: translateY(-50%) translateZ(0);
+    -ms-transform: translateY(-50%) translateZ(0);
+    -o-transform: translateY(-50%) translateZ(0);
+    transform: translateY(-50%) translateZ(0);
+    right: 0;
+}
+.wobd-badges.wobd-position-right_top{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.wobd-badges.wobd-position-right_bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.wobd-badges.wobd-position-left_center{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateZ(0);
+    -moz-transform: translateY(-50%) translateZ(0);
+    -ms-transform: translateY(-50%) translateZ(0);
+    -o-transform: translateY(-50%) translateZ(0);
+    transform: translateY(-50%) translateZ(0);
+    left: 0;
+}
+.wobd-badges.wobd-position-left_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wobd-badges.wobd-position-left_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*Template 1*/
+/*Position Adjustments*/
+.wobd-text-template-1.wobd-position-left_top{
+    margin-top: 15px;
+    margin-left: 0;
+}
+.wobd-text-template-1.wobd-position-right_top{
+    margin-top: 15px;
+    margin-right: 0;
+}
+.wobd-text-template-1.wobd-position-left_bottom{
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+.wobd-text-template-1.wobd-position-right_bottom{
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+.wobd-text-template-1.wobd-position-left_center{
+    margin-top: 0;
+    margin-left: 0;
+}
+.wobd-text-template-1.wobd-position-right_center{
+    margin-top: 0;
+    margin-right: 0;
+}
+/*Template Styles*/
+.wobd-text-template-1{
+    background: #9DBE19;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    padding: 7px 15px;
+}
+
+
+/*Template 2*/
+/*Position Adjustments*/
+.wobd-text-template-2.wobd-position-left_top{
+    margin-top: 20px;
+    margin-left: -12px;
+}
+.wobd-text-template-2.wobd-position-right_top{
+    margin-top: 20px;
+    margin-right: -12px;
+}
+.wobd-text-template-2.wobd-position-left_bottom{
+    margin-bottom: 20px;
+    margin-left: -12px;
+}
+.wobd-text-template-2.wobd-position-right_bottom{
+    margin-bottom: 20px;
+    margin-right: -12px;
+}
+.wobd-text-template-2.wobd-position-left_center{
+    margin-top: 0;
+    margin-left: -12px;
+}
+.wobd-text-template-2.wobd-position-right_center{
+    margin-top: 0;
+    margin-right: -12px;
+}
+/*Template Styles*/
+.wobd-text-template-2{
+    background: #e91d64;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    padding: 7px 15px;
+    position: relative;
+}
+.wobd-text-template-2:after{
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.wobd-text-template-2.wobd-position-left_center:after,
+.wobd-text-template-2.wobd-position-left_top:after,
+.wobd-text-template-2.wobd-position-left_bottom:after{
+    left: 0;
+    border-width: 0 0 6px 12px;
+    border-color: transparent transparent #93173f transparent;
+}
+.wobd-text-template-2.wobd-position-right_center:after,
+.wobd-text-template-2.wobd-position-right_top:after,
+.wobd-text-template-2.wobd-position-right_bottom:after{
+    right: 0;
+    border-width: 6px 0 0 12px;
+    border-color: transparent transparent transparent #93173f;
+}
+
+
+
+/*Template 3*/
+/*Position Adjustments*/
+.wobd-text-template-3.wobd-position-left_top{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.wobd-text-template-3.wobd-position-right_top{
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.wobd-text-template-3.wobd-position-left_bottom{
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.wobd-text-template-3.wobd-position-right_bottom{
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+.wobd-text-template-3.wobd-position-left_center{
+    margin-top: 0;
+    margin-left: 20px;
+}
+.wobd-text-template-3.wobd-position-right_center{
+    margin-top: 0;
+    margin-right: 20px;
+}
+/*Template Styles*/
+.wobd-text-template-3{
+    background: #ff002c;
+    color: #FFF;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    padding: 6px 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+}
+
+
+
+/*Template 4*/
+/*Position Adjustments*/
+.wobd-text-template-4.wobd-position-left_top{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.wobd-text-template-4.wobd-position-right_top{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.wobd-text-template-4.wobd-position-left_bottom{
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.wobd-text-template-4.wobd-position-right_bottom{
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.wobd-text-template-4.wobd-position-left_center{
+    margin-top: 0;
+    margin-left: 10px;
+}
+.wobd-text-template-4.wobd-position-right_center{
+    margin-top: 0;
+    margin-right: 10px;
+}
+/*Template Styles*/
+.wobd-text-template-4{
+    background: #f43d3f;
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding: 7px 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+
+
+/*Template 5*/
+/*Position Adjustments*/
+.wobd-text-template-5.wobd-position-left_top{
+    margin-top: 12px;
+    margin-left: 8px;
+}
+.wobd-text-template-5.wobd-position-right_top{
+    margin-top: 12px;
+    margin-right: 8px;
+}
+.wobd-text-template-5.wobd-position-left_bottom{
+    margin-bottom: 12px;
+    margin-left: 5px;
+}
+.wobd-text-template-5.wobd-position-right_bottom{
+    margin-bottom: 12px;
+    margin-right: 8px;
+}
+.wobd-text-template-5.wobd-position-left_center{
+    margin-top: 0;
+    margin-left: 8px;
+}
+.wobd-text-template-5.wobd-position-right_center{
+    margin-top: 0;
+    margin-right: 8px;
+}
+/*Template Styles*/
+.wobd-text-template-5{
+    background: #ff9d1e;
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 11px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+}
+.wobd-text-template-5 .wobd-text{
+    line-height: 1.15;
+}
+
+/*Image Background Templates*/
+/*General Styles*/
+.wobd-image-bg-wrap .wobd-first-text,
+.wobd-image-bg-wrap .wobd-second-text{
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.25;
+}
+
+
+
+/*Template 1*/
+.wobd-image-bg-wrap.wobd-image-1,
+.wobd-image-bg-wrap.wobd-image-2,
+.wobd-image-bg-wrap.wobd-image-3,
+.wobd-image-bg-wrap.wobd-image-4,
+.wobd-image-bg-wrap.wobd-image-5
+{
+    margin: 10px;
+}
+.wobd-image-bg-wrap.wobd-image-1 .wobd-text,
+.wobd-image-bg-wrap.wobd-image-2 .wobd-text,
+.wobd-image-bg-wrap.wobd-image-3 .wobd-text,
+.wobd-image-bg-wrap.wobd-image-4 .wobd-text,
+.wobd-image-bg-wrap.wobd-image-5 .wobd-text{
+    width: 90px;
+    height: 90px;
+    position: relative;
+}
+
+.wobd-image-bg-wrap.wobd-image-1 .wobd-image-ribbon,
+.wobd-image-bg-wrap.wobd-image-2 .wobd-image-ribbon,
+.wobd-image-bg-wrap.wobd-image-3 .wobd-image-ribbon,
+.wobd-image-bg-wrap.wobd-image-4 .wobd-image-ribbon,
+.wobd-image-bg-wrap.wobd-image-5 .wobd-image-ribbon{
+    width: 90px;
+    height: 90px;
+}
+
+.wobd-inner-text-container{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wobd-image-bg-wrap.wobd-image-1 .wobd-inner-text-container,
+.wobd-image-bg-wrap.wobd-image-2 .wobd-inner-text-container,
+.wobd-image-bg-wrap.wobd-image-3 .wobd-inner-text-container,
+.wobd-image-bg-wrap.wobd-image-4 .wobd-inner-text-container,
+.wobd-image-bg-wrap.wobd-image-5 .wobd-inner-text-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 90px;
+    padding: 0 10px;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+}
+
+.woocommerce .single-product .woocommerce-product-gallery .wobd-attachment-gallery.wobd-badges.wobd-position-left_center,
+.woocommerce .single-product .woocommerce-product-gallery .wobd-attachment-gallery.wobd-badges.wobd-position-right_center{
+    margin-top: -70px;
+}
+.woocommerce .single-product .woocommerce-product-gallery .wobd-attachment-gallery.wobd-badges.wobd-position-left_bottom,
+.woocommerce .single-product .woocommerce-product-gallery .wobd-attachment-gallery.wobd-badges.wobd-position-right_bottom{
+    bottom: 140px;
+}
+.woocommerce .single-product .woocommerce-product-gallery .wobd-attachment-gallery.wobd-timer-position-bottom{
+    bottom: 140px;
+}
+.woocommerce .single-product .woocommerce-product-gallery .wobd-badges{
+    z-index: 9;
+}
+
+
+
+
+
