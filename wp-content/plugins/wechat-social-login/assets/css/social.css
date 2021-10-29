@@ -103,7 +103,7 @@
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 
 }
 .xh-regbox .form-control{
     width: 100%;
@@ -230,8 +230,8 @@
 }
 
 .xh-mT20{margin-top: 20px;}
-.xh-social{height: 110px;}
-.xh-social-item{width: 110px;height: 110px; margin-right: 10px;cursor:pointer;
+.xh-social{height: 32px;}
+.xh-social-item{width: 32px;height: 32px; margin-right: 10px;cursor:pointer;
     float: left;
     display:-moz-inline-stack;
     zoom:1;
